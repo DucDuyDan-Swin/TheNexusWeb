@@ -1,0 +1,126 @@
+<style>
+
+/* Navigation Menu */
+nav {
+    display: flex; /* Aligns the menu items horizontally */
+    justify-content: center; /* Centers the menu items horizontally */
+    align-items: center; /* Centers the menu items vertically */
+    gap: 15px; /* Adds spacing between the menu items */
+    margin: 0; /* Removes extra margin */
+    padding: 10px; /* Adds padding inside the navigation bar */
+    background-color: #012333; /* Sets the background color of the navigation bar */
+    position: absolute; /* Allows positioning in the middle of the page */
+    top: 50%; /* Positions the nav vertically in the middle */
+    left: 50%; /* Positions the nav horizontally in the middle */
+    transform: translate(-50%, -50%); /* Adjusts for the nav's own width and height */
+    border-radius: 10px; /* Optional: Adds rounded corners to the nav */
+}
+
+nav .nav-link {
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Text color */
+    background-color: #014a66; /* Box background color */
+    padding: 10px 20px; /* Adds padding inside the boxes */
+    font-size: 16px; /* Adjusts font size */
+    border-radius: 5px; /* Rounds the corners of the boxes */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+nav .nav-link:hover {
+    background-color: #016a8a; /* Lighter shade on hover */
+}
+
+/* Import the font */
+@font-face {
+    font-family: 'Eightgon';
+    src: url('fonts/Eightgon-OGn6p.ttf') format('truetype');
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    position: relative;
+    background: url('background.png') no-repeat center center;
+    background-size: cover;
+    color: #C39131;
+    text-align: center;
+    padding: 2em 0;
+}
+header h1, header p {
+    font-family: 'Eightgon', sans-serif;
+    position: relative;
+    z-index: 1; /* Ensures text is above the background image */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 125px; /* Adjust size as needed */
+    height: auto;
+}
+body {
+    background-color: #white;
+    color: black; /* Optional: Ensures text is readable on a dark background */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;  /* Removes default margin */
+    padding: 0;  /* Removes default padding */
+}
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #C39131;
+    border-radius: 5px;
+}
+aside {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin: 20px;
+    border: 1px solid #C39131;
+    border-radius: 5px;
+}
+ul, ol {
+    margin-left: 20px;
+}
+.footer-link {
+    color: #C39131;
+    text-decoration: none; /* Removes underline */
+}
+.apply-now-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.apply-now-button {
+    display: inline-block;
+    background-color: #012333; /* Nexus theme color */
+    color: #C39131;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Table in About.html */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders don't double up */
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #C39131; /* Adds a border to the table, header, and cells */
+}
+
+th, td {
+    padding: 10px; /* Adds padding inside cells */
+    text-align: left; /* Aligns text to the left */
+}
+</style>
