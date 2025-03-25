@@ -123,4 +123,12 @@ th, td {
     padding: 10px; /* Adds padding inside cells */
     text-align: left; /* Aligns text to the left */
 }
+
+.gender {
+   width: 13%;
+}
+
+.technical_skill {
+    width: 26%;
+}
 </style>

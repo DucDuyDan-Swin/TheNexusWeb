@@ -14,13 +14,12 @@
         <p>Join our team at Nexus</p>
     </header>
 
+    
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="jobs.html">Job Opportunities</a></li>
-            <li><a href="apply.html">Apply Now</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="jobs.html" class="nav-link">Job Opportunities</a>
+        <a href="apply.html" class="nav-link">Apply Now</a>
+        <a href="about.html" class="nav-link">About Us</a>
     </nav>
 
     <main>
@@ -47,7 +46,7 @@
                 <input type="date" id="dob" name="dob" required><br><br>
 
                 <!-- Gender -->
-                <fieldset>
+                <fieldset class="gender">
                     <legend>Gender:</legend>
                     <input type="radio" id="male" name="gender" value="Male" required>
                     <label for="male">Male</label>
@@ -91,7 +90,7 @@
                 <input type="text" id="phone" name="phone" pattern="[0-9 ]{8,12}" required><br><br>
 
                 <!-- Required Technical Skills -->
-                <fieldset>
+                <fieldset class="technical_skill">
                     <legend>Required Technical Skills:</legend>
                     <input type="checkbox" id="html" name="skills" value="HTML" required>
                     <label for="html">HTML</label>
@@ -99,11 +98,18 @@
                     <label for="css">CSS</label>
                     <input type="checkbox" id="javascript" name="skills" value="JavaScript" required>
                     <label for="javascript">JavaScript</label>
+                    <input type="checkbox" id="mysql" name="skills" value="MySQL" required>
+                    <label for="mysql">MySQL</label>
+                    <input type="checkbox" id="python" name="skills" value="Python" required>
+                    <label for="python">Python</label>
+                    <input type="checkbox" id="other" name="skills" value="Other" required>
+                    <label for="other">Other</label>
                 </fieldset><br>
 
                 <!-- Other Skills -->
                 <label for="other-skills">Other Skills:</label>
-                <textarea id="other-skills" name="other-skills" rows="4" cols="50"></textarea><br><br>
+                <br>
+                <textarea id="other-skills" name="other-skills" rows="4" cols="50" placeholder="Write any additional skills that you have on this box...."></textarea><br><br>
 
                 <!-- Submit Button -->
                 <button type="submit">Apply</button>
@@ -112,7 +118,7 @@
     </main>
 
     <footer>
-        <p>&copy;<a href="https://www.nexus.com" target="Our Jira Project" class="footer-link">2025 Nexus. All rights reserved.</a></p>
+        <p>&copy;<a href="https://nexuswebs.atlassian.net/jira/software/projects/SCRUM/boards/1" target="Our Jira Project" class="footer-link">2025 Nexus. All rights reserved. &nbsp; | &nbsp;</a> <a href="mailto:nexusweb4321@gmail.com" class="footer-link">Contact Us</a></p> </p>
     </footer>
 </body>
 </html>
