@@ -1,26 +1,30 @@
 <style>
-
+/* Import the font */
+@font-face {
+    font-family: 'Eightgon';
+    src: url('fonts/Eightgon-OGn6p.ttf') format('truetype');
+}
 /* Navigation Menu */
 nav {
     display: flex; /* Aligns the menu items horizontally */
     justify-content: center; /* Centers the menu items horizontally */
     align-items: center; /* Centers the menu items vertically */
-    gap: 15px; /* Adds spacing between the menu items */
-    margin: 0; /* Removes extra margin */
+    gap: 30px; /* Adds spacing between the menu items */
+    margin: 0px auto; /* Adds spacing below the header and centers the nav horizontally */
     padding: 10px; /* Adds padding inside the navigation bar */
-    background-color: #012333; /* Sets the background color of the navigation bar */
-    position: absolute; /* Allows positioning in the middle of the page */
-    top: 50%; /* Positions the nav vertically in the middle */
-    left: 50%; /* Positions the nav horizontally in the middle */
-    transform: translate(-50%, -50%); /* Adjusts for the nav's own width and height */
-    border-radius: 10px; /* Optional: Adds rounded corners to the nav */
+    width: 100%; /* Makes the nav responsive */
+    max-width: auto; /* Limits the maximum width */
+    position: relative; /* Positions the nav relative to the document flow */
+    top: 0; /* Removes the absolute positioning */
+    transform: none; /* Removes the transform property */
+    background-color: #014a66; /* Background color of the navigation bar */
 }
 
 nav .nav-link {
     text-decoration: none; /* Removes underline from links */
     color: white; /* Text color */
     background-color: #014a66; /* Box background color */
-    padding: 10px 20px; /* Adds padding inside the boxes */
+    padding: 10px 5%; /* Adds padding inside the boxes */
     font-size: 16px; /* Adjusts font size */
     border-radius: 5px; /* Rounds the corners of the boxes */
     transition: background-color 0.3s ease; /* Smooth hover effect */
@@ -29,12 +33,6 @@ nav .nav-link {
 
 nav .nav-link:hover {
     background-color: #016a8a; /* Lighter shade on hover */
-}
-
-/* Import the font */
-@font-face {
-    font-family: 'Eightgon';
-    src: url('fonts/Eightgon-OGn6p.ttf') format('truetype');
 }
 body {
     font-family: Arial, sans-serif;
