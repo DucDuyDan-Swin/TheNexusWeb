@@ -46,7 +46,7 @@ header, footer {
     background-size: cover;
     color: #C39131;
     text-align: center;
-    padding: 2em 0;
+    padding: 30px;
 }
 .header-container {
     display: flex;
@@ -55,11 +55,11 @@ header, footer {
 }
 .header-text h1 {
     margin: 0;
-    font-size: 2rem; /* Adjust the font size as needed */
+    font-size: 16px; /* Adjust the font size as needed */
 }
 .header-text p {
     margin: 0;
-    font-size: 1rem; /* Adjust the font size as needed */
+    font-size: 16px; /* Adjust the font size as needed */
     color: #555; /* Optional: Change the text color */
 }
 header h1, header p {
@@ -84,7 +84,7 @@ header h1, header p {
     margin: 20px auto; /* Add spacing and center it horizontally */
     border: 0px solid #C39131; /* Optional: Add a border */
     border-radius: 10px; /* Optional: Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+    box-shadow: 0 4px 8px #00000033; /* Optional: Add a shadow */
 }
 body {
     background-color: #f4f4f4;
@@ -145,13 +145,13 @@ form select {
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.form {
-    padding: 20px;
+.form { /* Form container */
+    padding: 0.1px;
     max-width: 800px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 0px;
 }
 
 .gender {
@@ -161,21 +161,40 @@ form select {
  .technical_skill {
      width: auto;
  }
+
  form input[type="submit"] {
      padding: 10px;
      border-radius: 5px;
      border: none;
-     background-color: #C39131;
-     color: #fff;
+     background-color: #CECECE;
+     color: black;
      font-size: 16px;
      cursor: pointer;
      transition: color 0.3s;
      margin-right: 10px;
  }
+/* Submit button */
+ .submit-button {
+    font-weight: bold; /* Makes the text bold */
+    display: block; /* Ensures the button behaves like a block element */
+    margin-top: -87px; /* Adjusts the spacing above the button */
+    margin-left: auto; /* Pushes the button to the right */
+    margin-right: 0; /* Ensures no extra margin on the right */
+    padding: 10px 20px; /* Adds padding for better appearance */
+    background-color: #CECECE; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Removes the default border */
+    border-radius: 5px; /* Rounds the corners */
+    font-size: 16px; /* Adjusts the font size */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: background-color 0.3s ease; /* Adds a smooth hover effect */
+}
 
- form input[type="submit"]:hover {
-     background-color: #af7b19;
- }
+.submit-button:hover {
+    background-color: #C39131; /* Changes the background color on hover */
+    color: white; /* Changes the text color on hover */
+}
+
 aside {
     background-color: #f4f4f4;
     padding: 15px;
@@ -183,6 +202,7 @@ aside {
     border: 1px solid #C39131;
     border-radius: 5px;
 }
+
 ul, ol {
     margin-left: 20px;
 }
@@ -208,21 +228,28 @@ ul, ol {
     color: #C39131;
     text-decoration: none; /* Removes underline */
 }
+/* Apply Now Button */
 .apply-now-container {
-    text-align: center;
-    margin: 20px 0;
+    text-align: center; /* Centers the button horizontally */
+    margin: 20px 0; /* Adds spacing above and below the button */
 }
 
 .apply-now-button {
-    display: inline-block;
-    background-color: #012333; /* Nexus theme color */
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    display: inline-block; /* Makes the button behave like an inline block */
+    background-color: #CECECE; /* Button background color */
+    color: black; /* Button text color */
+    text-decoration: none; /* Removes underline from the text */
+    padding: 10px 20px; /* Adds padding inside the button */
+    font-size: 16px; /* Adjusts the font size */
+    border-radius: 5px; /* Rounds the corners */
+    transition: background-color 0.3s ease; /* Adds a smooth hover effect */
 }
+
+.apply-now-button:hover {
+    background-color: #C39131; /* Changes the background color on hover */
+    color: white; /* Changes the text color on hover */
+}
+
 .group-photo {
     width: 100%;
     max-width: 600px;

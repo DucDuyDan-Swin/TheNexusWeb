@@ -6,6 +6,22 @@
     <title>Apply for a Job at Nexus</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/images/logo.png" type="image/png">
+    <script> // JavaScript code to validate the form, Dan use promt "If user tick on Other they must type something in Other Skills"
+        document.addEventListener("DOMContentLoaded", function () {
+            const otherRadio = document.getElementById("other");
+            const otherSkillsTextarea = document.getElementById("other-skills");
+            const form = document.querySelector("form");
+    
+            form.addEventListener("submit", function (event) {
+                // Check if "Other" is selected
+                if (otherRadio.checked && otherSkillsTextarea.value.trim() === "") {
+                    event.preventDefault(); // Prevent form submission
+                    alert("Please specify what other skills you have if you select 'Other'.");
+                    otherSkillsTextarea.focus(); // Focus on the textarea
+                }
+            });
+        });
+    </script>
 </head>
 <body class="form_body">
     <header>
@@ -16,10 +32,10 @@
 
     
     <nav>
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="jobs.html" class="nav-link">Job Opportunities</a>
-        <a href="apply.html" class="nav-link">Apply Now</a>
-        <a href="about.html" class="nav-link">About Us</a>
+        <a href="index.html" class="nav-link"><strong>Home</strong></a>
+        <a href="jobs.html" class="nav-link"><strong>Job Opportunities</strong></a>
+        <a href="apply.html" class="nav-link"><strong>Apply Now</strong></a>
+        <a href="about.html" class="nav-link"><strong>About Us</strong></a>
     </nav>
 
     <main class="form">
@@ -54,7 +70,7 @@
                     <input type="radio" id="female" name="gender" value="Female" required>
                     <label for="female">Female</label>
                     <input type="radio" id="other" name="gender" value="Other" required>
-                    <label for="other">Other</label>
+                    <label for="other-gen">Other</label>
                 </fieldset><br>
 
                 <!-- Street Address -->
@@ -93,18 +109,18 @@
                 <!-- Required Technical Skills -->
                 <fieldset class="technical_skill">
                     <legend>Required Technical Skills:</legend>
-                    <input type="checkbox" id="html" name="skills" value="HTML" required>
+                    <input type="radio" id="html" required>
                     <label for="html">HTML</label>
-                    <input type="checkbox" id="css" name="skills" value="CSS" required>
+                    <input type="radio" id="css" required>
                     <label for="css">CSS</label>
-                    <input type="checkbox" id="javascript" name="skills" value="JavaScript" required>
+                    <input type="radio" id="javascript" required>
                     <label for="javascript">JavaScript</label>
-                    <input type="checkbox" id="mysql" name="skills" value="MySQL" required>
+                    <input type="radio" id="mysql" required>
                     <label for="mysql">MySQL</label>
-                    <input type="checkbox" id="python" name="skills" value="Python" required>
+                    <input type="radio" id="python" required>
                     <label for="python">Python</label>
-                    <input type="checkbox" id="other" name="skills" value="Other" required>
-                    <label for="other">Other</label>
+                    <input type="radio" id="other" name="skills" value="Other" required>
+                    <label for="other-ski">Other</label>
                 </fieldset><br>
 
                 <!-- Other Skills -->
@@ -113,7 +129,7 @@
                 <textarea id="other-skills" name="other-skills" rows="4" cols="50" placeholder="Write any additional skills that you have on this box...."></textarea><br><br>
 
                 <!-- Submit Button -->
-                <input type="submit" value="Apply"></input>
+                <input type="submit" class="submit-button"></input>
             </form>
         </section>
     </main>
