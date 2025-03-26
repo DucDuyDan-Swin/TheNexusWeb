@@ -44,11 +44,32 @@ body {
 }
 header, footer {
     position: relative;
-    background: url('background.png') no-repeat center center;
+    background: url('../images/background.png') no-repeat center center;
     background-size: cover;
     color: #C39131;
     text-align: center;
     padding: 2em 0;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between the logo and text */
+}
+
+.logo {
+    width: 100px; /* Adjust the size of the logo */
+    height: auto;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2rem; /* Adjust the font size as needed */
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 1rem; /* Adjust the font size as needed */
+    color: #555; /* Optional: Change the text color */
 }
 header h1, header p {
     font-family: 'Eightgon', sans-serif;
@@ -63,6 +84,16 @@ header h1, header p {
     left: 10px;
     width: 125px; /* Adjust size as needed */
     height: auto;
+}
+.logowithcap {
+    width: 78vw; /* Make the image related to sceen */
+    max-width: 800px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center the image */
+    margin: 20px auto; /* Add spacing and center it horizontally */
+    border: 0px solid #C39131; /* Optional: Add a border */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
 }
 body {
     background-color: #white;
@@ -107,7 +138,12 @@ ul, ol {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
-
+.group-photo {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
 /* Table in About.html */
 table {
     width: 100%;
