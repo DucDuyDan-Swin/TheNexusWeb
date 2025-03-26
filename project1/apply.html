@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/images/logo.png" type="image/png">
 </head>
-<body>
+<body class="form_body">
     <header>
         <img src="/images/logo.png" alt="Nexus Logo" class="logo">
         <h1>Apply for a Job</h1>
@@ -22,13 +22,14 @@
         <a href="about.html" class="nav-link">About Us</a>
     </nav>
 
-    <main>
+    <main class="form">
         <section>
             <h2>Job Application Form</h2>
             <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
                 <!-- Job Reference Number -->
                 <label for="job-ref">Job Reference Number:</label>
                 <select id="job-ref" name="job-ref" required>
+                    <option value="">Please Select</option>
                     <option value="FSD01">FSD01 - Full Stack Developer</option>
                     <option value="CSA02">CSA02 - Cybersecurity Analyst</option>
                 </select><br><br>
@@ -62,7 +63,7 @@
 
                 <!-- Suburb/Town -->
                 <label for="suburb">Suburb/Town:</label>
-                <input type="text" id="suburb" name="suburb" maxlength="40" required><br><br>
+                <input type="text" id="suburb" name="suburb" maxlength="40" pattern="[A-Za-z]+" required><br><br>
 
                 <!-- State -->
                 <label for="state">State:</label>
@@ -112,7 +113,7 @@
                 <textarea id="other-skills" name="other-skills" rows="4" cols="50" placeholder="Write any additional skills that you have on this box...."></textarea><br><br>
 
                 <!-- Submit Button -->
-                <button type="submit">Apply</button>
+                <input type="submit" value="Apply"></input>
             </form>
         </section>
     </main>
