@@ -6,6 +6,23 @@
     <title>Job Opportunities at Nexus</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/images/logo.png" type="png">
+    <!--This was created by ChatGPT with the promt "selection box pop up went click on" -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const headers = document.querySelectorAll(".collapsible-header");
+    
+            headers.forEach(header => {
+                header.addEventListener("click", function () {
+                    const content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -22,67 +39,76 @@
     </nav>
 
     <main>
-        <!--The job description of Full Stack Developer was generated on ChatGPT with the prompt "Write me a job description for Full Stack Development" and "Write me a job description for Cybersecurity Analyst"-->
-        <section>
-            <h2>Position 1: Full Stack Developer</h2>
-            <p><strong>Reference Number:</strong> FSD01</p>
-            <p><strong>Salary Range:</strong> $80,000 - $120,000 per year</p>
-            <p><strong>Reports To:</strong> Lead Software Engineer</p>
-            <h3>Key Responsibilities:</h3>
-            <ul>
-                <li>Develop and maintain web applications using modern frameworks.</li>
-                <li>Design and implement RESTful APIs.</li>
-                <li>Collaborate with UI/UX designers to create intuitive user interfaces.</li>
-                <li>Optimize applications for performance and scalability.</li>
-            </ul>
-            <h3>Required Qualifications:</h3>
-            <ol>
-                <li>Proficiency in JavaScript, HTML, CSS, and a backend language (e.g., Node.js, Python).</li>
-                <li>3+ years of experience in full-stack development.</li>
-                <li>Strong understanding of database systems (SQL/NoSQL).</li>
-            </ol>
-            <h4>Essential:</h4>
-            <ul>
-                <li>Proficiency in JavaScript, HTML, CSS, and a backend language (e.g., Node.js, Python).</li>
-                <li>3+ years of experience in full-stack development.</li>
-                <li>Strong understanding of database systems (SQL/NoSQL).</li>
-            </ul>
-            <h4>Preferable:</h4>
-            <ul>
-                <li>Experience with cloud platforms like AWS or Azure.</li>
-                <li>Knowledge of DevOps practices and CI/CD pipelines.</li>
-            </ul>
+        <!--The job description created by ChatGPT with the prompt "Write me a job description for Full Stack Development and Cybersecurity Analyst"-->
+        <section><!--Job 1-->
+            <div class="collapsible-header">
+                <h2>Position 1: Full Stack Developer</h2>
+                <p><strong>Reference Number:</strong> FSD01</p>
+                <p><strong>Salary Range:</strong> $80,000 - $120,000 per year</p>
+                <p><strong>Reports To:</strong> Lead Software Engineer</p>
+            </div>
+            <div class="collapsible-content">
+                <h3>Key Responsibilities:</h3>
+                <ul>
+                    <li>Develop and maintain web applications using modern frameworks.</li>
+                    <li>Design and implement RESTful APIs.</li>
+                    <li>Collaborate with UI/UX designers to create intuitive user interfaces.</li>
+                    <li>Optimize applications for performance and scalability.</li>
+                </ul>
+                <h3>Required Qualifications:</h3>
+                <ol>
+                    <li>Proficiency in JavaScript, HTML, CSS, and a backend language (e.g., Node.js, Python).</li>
+                    <li>3+ years of experience in full-stack development.</li>
+                    <li>Strong understanding of database systems (SQL/NoSQL).</li>
+                </ol>
+                <h4>Essential:</h4>
+                <ul>
+                    <li>Proficiency in JavaScript, HTML, CSS, and a backend language (e.g., Node.js, Python).</li>
+                    <li>3+ years of experience in full-stack development.</li>
+                    <li>Strong understanding of database systems (SQL/NoSQL).</li>
+                </ul>
+                <h4>Preferable:</h4>
+                <ul>
+                    <li>Experience with cloud platforms like AWS or Azure.</li>
+                    <li>Knowledge of DevOps practices and CI/CD pipelines.</li>
+                </ul>
+            </div>
+        </section>
         </section>
 
-        <section>
-            <h2>Position 2: Cybersecurity Analyst</h2>
-            <p><strong>Reference Number:</strong> CSA02</p>
-            <p><strong>Salary Range:</strong> $90,000 - $130,000 per year</p>
-            <p><strong>Reports To:</strong> IT Security Manager</p>
-            <h3>Key Responsibilities:</h3>
-            <ul>
-                <li>Monitor and analyze network traffic for security threats.</li>
-                <li>Conduct vulnerability assessments and penetration testing.</li>
-                <li>Develop and implement security policies and protocols.</li>
-                <li>Respond to and investigate security incidents.</li>
-            </ul>
-            <h3>Required Qualifications:</h3>
-            <ol>
-                <li>Strong understanding of cybersecurity principles and tools.</li>
-                <li>2+ years of experience in a cybersecurity role.</li>
-                <li>Proficiency in tools like Wireshark, Nessus, and Splunk.</li>
-            </ol>
-            <h4>Essential:</h4>
-            <ul>
-                <li>Strong understanding of cybersecurity principles and tools.</li>
-                <li>2+ years of experience in a cybersecurity role.</li>
-                <li>Proficiency in tools like Wireshark, Nessus, and Splunk.</li>
-            </ul>
-            <h4>Preferable:</h4>
-            <ul>
-                <li>Certifications such as CISSP, CEH, or CompTIA Security+.</li>
-                <li>Experience with incident response and forensic analysis.</li>
-            </ul>
+        <section><!--Job 2-->
+            <div class="collapsible-header">
+                <h2>Position 2: Cybersecurity Analyst</h2>
+                <p><strong>Reference Number:</strong> CSA02</p>
+                <p><strong>Salary Range:</strong> $90,000 - $130,000 per year</p>
+                <p><strong>Reports To:</strong> IT Security Manager</p>
+            </div>
+            <div class="collapsible-content">
+                <h3>Key Responsibilities:</h3>
+                <ul>
+                    <li>Monitor and analyze network traffic for security threats.</li>
+                    <li>Conduct vulnerability assessments and penetration testing.</li>
+                    <li>Develop and implement security policies and protocols.</li>
+                    <li>Respond to and investigate security incidents.</li>
+                </ul>
+                <h3>Required Qualifications:</h3>
+                <ol>
+                    <li>Strong understanding of cybersecurity principles and tools.</li>
+                    <li>2+ years of experience in a cybersecurity role.</li>
+                    <li>Proficiency in tools like Wireshark, Nessus, and Splunk.</li>
+                </ol>
+                <h4>Essential:</h4>
+                <ul>
+                    <li>Strong understanding of cybersecurity principles and tools.</li>
+                    <li>2+ years of experience in a cybersecurity role.</li>
+                    <li>Proficiency in tools like Wireshark, Nessus, and Splunk.</li>
+                </ul>
+                <h4>Preferable:</h4>
+                <ul>
+                    <li>Certifications such as CISSP, CEH, or CompTIA Security+.</li>
+                    <li>Experience with incident response and forensic analysis.</li>
+                </ul>
+            </div>
         </section>
 
         <aside>
