@@ -103,7 +103,7 @@ section {
     border-radius: 5px;
 }
 /* the form styling*/
-
+/* The colour of the background outside the form */
 .form_body {
     background-color: #82C8E5;
 }
@@ -117,18 +117,19 @@ form label {
     margin-bottom: 5px;
     color: #2c3e50;
 }
-
+/* the fieldset colour*/
 form fieldset {
     margin-bottom: 15px;
     border: 1px solid #C39131;
     border-radius: 5px;
     padding: 10px;
 }
+/* the legend font colour and weight*/
 form legend {
     font-weight: bold;
     color: #2c3e50;
 } 
-
+/* the form input style, size, and colour*/
 form input[type="text"],
 form input[type="color"],
 form input[type="time"],
@@ -155,7 +156,7 @@ form select {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 0px;
 }
-
+/* the size of the field set on gender and technical skill */
 .gender {
     width: auto;
  }
@@ -163,7 +164,7 @@ form select {
  .technical_skill {
      width: auto;
  }
-
+/* the submit button size and colour*/
  form input[type="submit"] {
      padding: 10px;
      border-radius: 5px;
@@ -191,7 +192,7 @@ form select {
     cursor: pointer; /* Changes the cursor to a pointer on hover */
     transition: background-color 0.3s ease; /* Adds a smooth hover effect */
 }
-
+/* THe submit button when we hover the cursor */
 .submit-button:hover {
     background-color: #C39131; /* Changes the background color on hover */
     color: white; /* Changes the text color on hover */
