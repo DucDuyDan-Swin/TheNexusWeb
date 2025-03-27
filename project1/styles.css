@@ -1,45 +1,47 @@
-<style>
 /* Import the font */
 @font-face {
     font-family: 'Eightgon';
     src: url('fonts/Eightgon-OGn6p.ttf') format('truetype');
 }
+
 /* Navigation Menu */
 nav {
-    display: flex; /* Aligns the menu items horizontally */
-    justify-content: center; /* Centers the menu items horizontally */
-    align-items: center; /* Centers the menu items vertically */
-    gap: 30px; /* Adds spacing between the menu items */
-    margin: 0px auto; /* Adds spacing below the header and centers the nav horizontally */
-    padding: 10px; /* Adds padding inside the navigation bar */
-    width: 100%; /* Makes the nav responsive */
-    max-width: auto; /* Limits the maximum width */
-    position: relative; /* Positions the nav relative to the document flow */
-    top: 0; /* Removes the absolute positioning */
-    transform: none; /* Removes the transform property */
-    background-color: #014a66; /* Background color of the navigation bar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: #014a66;
 }
 
 nav .nav-link {
-    text-decoration: none; /* Removes underline from links */
-    color: white; /* Text color */
-    background-color: #014a66; /* Box background color */
-    padding: 10px 5%; /* Adds padding inside the boxes */
-    font-size: 16px; /* Adjusts font size */
-    border-radius: 5px; /* Rounds the corners of the boxes */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-    white-space: nowrap; /* Prevents text from wrapping */
+    text-decoration: none;
+    color: white;
+    background-color: #014a66;
+    padding: 10px 5%;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
 }
 
 nav .nav-link:hover {
-    background-color: #016a8a; /* Lighter shade on hover */
+    background-color: #016a8a;
 }
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    color: black;
 }
+
 header, footer {
     position: relative;
     background: url('../images/background.png') no-repeat center center;
@@ -271,5 +273,3 @@ th, td {
     padding: 10px; /* Adds padding inside cells */
     text-align: left; /* Aligns text to the left */
 }
-
-</style>
