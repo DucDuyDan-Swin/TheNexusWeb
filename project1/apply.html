@@ -8,7 +8,7 @@
     <link rel="icon" href="/images/logo.png" type="image/png">
     <script> // JavaScript code to validate the form, Dan use promt "If user tick on Other they must type something in Other Skills"
         document.addEventListener("DOMContentLoaded", function () {
-            const otherRadio = document.getElementById("other");
+            const otherRadio = document.getElementById("others");
             const otherSkillsTextarea = document.getElementById("other-skills");
             const form = document.querySelector("form");
     
@@ -40,14 +40,14 @@
 
     <main class="form">
         <section>
-            <h2>Job Application Form</h2>
             <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+                <h2>Job Application Form</h2>
                 <!-- Job Reference Number -->
                 <label for="job-ref">Job Reference Number:</label>
                 <select id="job-ref" name="job-ref" required>
                     <option value="">Please Select</option>
                     <option value="FSD01">FSD01 - Full Stack Developer</option>
-                    <option value="CSA02">CSA02 - Cybersecurity Analyst</option>
+                    <option value="CSA02">DTA02 - Data Analyst</option>
                 </select><br><br>
 
                 <!-- First Name -->
@@ -69,7 +69,7 @@
                     <label for="male">Male</label>
                     <input type="radio" id="female" name="gender" value="Female" required>
                     <label for="female">Female</label>
-                    <input type="radio" id="other" name="gender" value="Other" required>
+                    <input type="radio" id="otherg" name="gender" value="OtherG" required>
                     <label for="other-gen">Other</label>
                 </fieldset><br>
 
@@ -107,21 +107,21 @@
                 <input type="text" id="phone" name="phone" pattern="[0-9 ]{8,12}" required><br><br>
 
                 <!-- Required Technical Skills -->
-                <fieldset class="technical_skill">
+                <fieldset class="technical-skills">
                     <legend>Required Technical Skills:</legend>
-                    <input type="radio" id="html" required>
+                    <input type="checkbox" id="html" name="skills" value="HTML">
                     <label for="html">HTML</label>
-                    <input type="radio" id="css" required>
+                    <input type="checkbox" id="css" name="skills" value="CSS">
                     <label for="css">CSS</label>
-                    <input type="radio" id="javascript" required>
+                    <input type="checkbox" id="javascript" name="skills" value="JavaScript">
                     <label for="javascript">JavaScript</label>
-                    <input type="radio" id="mysql" required>
+                    <input type="checkbox" id="mysql" name="skills" value="MySQL">
                     <label for="mysql">MySQL</label>
-                    <input type="radio" id="python" required>
+                    <input type="checkbox" id="python" name="skills" value="Python">
                     <label for="python">Python</label>
-                    <input type="radio" id="other" name="skills" value="Other" required>
-                    <label for="other-ski">Other</label>
-                </fieldset><br>
+                    <input type="checkbox" id="others" name="skills" value="OtherS">
+                    <label for="other">Other</label>
+                </fieldset><br><br>
 
                 <!-- Other Skills -->
                 <label for="other-skills">Other Skills:</label>
@@ -129,13 +129,13 @@
                 <textarea id="other-skills" name="other-skills" rows="4" cols="50" placeholder="Write any additional skills that you have on this box...."></textarea><br><br>
 
                 <!-- Submit Button -->
-                <input type="submit" class="submit-button"></input>
+                <input type="submit" class="submit-button">
             </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy;<a href="https://nexuswebs.atlassian.net/jira/software/projects/SCRUM/boards/1" target="Our Jira Project" class="footer-link">2025 Nexus. All rights reserved. &nbsp; | &nbsp;</a> <a href="mailto:nexusweb4321@gmail.com" class="footer-link">Contact Us</a></p> </p>
+        <p>&copy;<a href="https://nexuswebs.atlassian.net/jira/software/projects/SCRUM/boards/1" target="Our Jira Project" class="footer-link">2025 Nexus. All rights reserved. &nbsp; | &nbsp;</a> <a href="mailto:nexusweb4321@gmail.com" class="footer-link">Contact Us</a></p>
     </footer>
 </body>
 </html>
