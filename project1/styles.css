@@ -81,27 +81,12 @@ header h1, header p {
 
 /* Aside Styles */
 aside {
-    border: 1px solid #C39131; /* Adds a border with Nexus theme color */
-    border-radius: 5px; /* Rounds the corners of the border */
-    padding: 20px; /* Adds padding inside the section */
-    margin: 20px; /* Adds spacing around the section */
+    width: 25%; /* Sets the width to 25% of the page */
+    float: right; /* Floats the aside to the right */
+    border: 2px solid #C39131; /* Adds a gold-colored border */
+    padding: 15px; /* Adds padding inside the aside */
+    margin: 20px; /* Adds margin around the aside */
     background-color: #f9f9f9; /* Adds a light background color */
-}
-
-aside h3 {
-    text-align: left; /* Left the heading text */
-    color: black; /* Sets the heading color */
-    font-weight: bold; /* Makes the heading bold */
-    margin-bottom: 15px; /* Adds spacing below the heading */
-}
-
-aside ol {
-    padding-left: 20px; /* Adds padding to the left of the list */
-    color: black; /* Sets the text color for the list items */
-}
-
-aside ol li {
-    margin-bottom: 10px; /* Adds spacing between list items */
 }
 
 /* Logo Styles */
@@ -135,6 +120,15 @@ aside ol li {
 .join-team a:hover {
     text-decoration: underline; /* Adds underline on hover */
     color: #016a8a; /* Changes the color on hover */
+}
+
+/* Why Join Us Style */
+.why-join {
+    border: 1px solid #C39131; /* Adds a gold border */
+    border-radius: 5px; /* Rounds the corners of the border */
+    padding: 20px; /* Adds padding inside the section */
+    margin: 20px; /* Adds spacing above and below the section and centers it */
+    background-color: #f9f9f9; /* Adds a light background color */
 }
 
 /* Apply Now Button Styles */
@@ -292,7 +286,7 @@ table {
 }
 
 table th, table td {
-    border: 1px solid #C39131; /* Adds a gold border to table cells */
+    border: 1px solid #333; /* Adds a gold border to table cells */
     padding: 10px; /* Adds padding inside the cells */
     text-align: center; /* Aligns text to the left */
     color: #333; /* Sets the text color */
