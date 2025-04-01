@@ -6,22 +6,6 @@
     <title>Apply for a Job at Nexus</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="../images/logo.png" type="image/png">
-    <script> // JavaScript code to validate the form, Dan use promt "If user tick on Other they must type something in Other Skills"
-        document.addEventListener("DOMContentLoaded", function () {
-            const otherRadio = document.getElementById("others");
-            const otherSkillsTextarea = document.getElementById("other-skills");
-            const form = document.querySelector("form");
-    
-            form.addEventListener("submit", function (event) {
-                // Check if "Other" is selected
-                if (otherRadio.checked && otherSkillsTextarea.value.trim() === "") {
-                    event.preventDefault(); // Prevent form submission
-                    alert("Please specify what other skills you have if you select 'Other'.");
-                    otherSkillsTextarea.focus(); // Focus on the textarea
-                }
-            });
-        });
-    </script>
 </head>
 <body class="form_body">
     <header>
