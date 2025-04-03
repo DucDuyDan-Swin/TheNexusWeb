@@ -307,9 +307,6 @@ table th {
     float: right;
 }
 
-#StudentIDHead {
-
-}
 /* Hover Name Effect (in table) */
 #Danny:hover{
     background-color: #3eed3e; /* Colour is added when hovered */ 
