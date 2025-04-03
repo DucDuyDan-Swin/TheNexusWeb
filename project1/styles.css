@@ -303,8 +303,14 @@ table th {
     font-weight: bold; /* Makes the header text bold */
 }
 
+.Info {
+    float: left;
+    width: 65%;
+}
+
 .StudentID {
     float: right;
+    height: 265px;
 }
 
 /* Hover Name Effect (in table) */
