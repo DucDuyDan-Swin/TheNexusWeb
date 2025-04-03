@@ -192,10 +192,7 @@ form legend {
 } 
 /* the form input style, size, and colour*/
 form input[type="text"],
-form input[type="color"],
-form input[type="time"],
 form input[type="date"],
-form input[type="range"],
 form input[type="email"],
 form textarea,
 form select {
@@ -298,6 +295,13 @@ table th {
     font-weight: bold; /* Makes the header text bold */
 }
 
+.StudentID {
+    float: right;
+}
+
+#StudentIDHead {
+
+}
 /* Hover Name Effect (in table) */
 #Danny:hover{
     background-color: #3eed3e; /* Colour is added when hovered */ 
