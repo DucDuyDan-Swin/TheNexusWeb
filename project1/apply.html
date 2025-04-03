@@ -24,7 +24,7 @@
 
     <main class="form">
         <section>
-            <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+            <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" target="_blank">
                 <h2>Job Application Form</h2>
                 <!-- Job Reference Number -->
                 <label for="job-ref">Job Reference Number:</label>
@@ -93,17 +93,17 @@
                 <!-- Required Technical Skills -->
                 <fieldset class="technical-skills">
                     <legend>Required Technical Skills:</legend>
-                    <input type="checkbox" id="html" name="skills" value="HTML">
+                    <input type="checkbox" id="html" name="skills[]" value="HTML">
                     <label for="html">HTML</label>
-                    <input type="checkbox" id="css" name="skills" value="CSS">
+                    <input type="checkbox" id="css" name="skills[]" value="CSS">
                     <label for="css">CSS</label>
-                    <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+                    <input type="checkbox" id="javascript" name="skills[]" value="JavaScript">
                     <label for="javascript">JavaScript</label>
-                    <input type="checkbox" id="mysql" name="skills" value="MySQL">
+                    <input type="checkbox" id="mysql" name="skills[]" value="MySQL">
                     <label for="mysql">MySQL</label>
-                    <input type="checkbox" id="python" name="skills" value="Python">
+                    <input type="checkbox" id="python" name="skills[]" value="Python">
                     <label for="python">Python</label>
-                    <input type="checkbox" id="others" name="skills" value="OtherS">
+                    <input type="checkbox" id="others" name="skills[]" value="OtherS">
                     <label for="other">Other</label>
                 </fieldset><br><br>
 

@@ -20,8 +20,8 @@ nav {
     display: flex; /* Makes the nav items align horizontally */
     justify-content: center; /* Centers the nav items */
     align-items: center; /* Vertically centers the nav items */
-    gap: 30px; /* Adds spacing between nav items */
-    margin: 0 auto; /* Centers the nav bar horizontally */
+    gap: 5%; /* Adds spacing between nav items */
+    margin: 0; /* Centers the nav bar horizontally */
     padding: 0px; /* Adds padding inside the nav bar */
     width: 100%; /* Makes the nav bar span the full width */
     background-color: #014a66; /* Sets the background color of the nav bar */
@@ -34,7 +34,7 @@ nav .nav-link {
     padding: 10px 2vw; /* Adds padding inside the nav links */
     font-size: 16px; /* Sets the font size of the nav links */
     border-radius: 5px; /* Rounds the corners of the nav links */
-    white-space: nowrap; /* Prevents text from wrapping */
+    white-space: wrap; /* Prevents text from wrapping */
     margin: 0 10px; /* Adds spacing between the nav links */
 }
 
@@ -132,7 +132,7 @@ aside {
 
 /* Why Join Us Style */
 .why-join {
-    border: 1px solid #C39131; /* Adds a gold border */
+    border: 1.5px solid #C39131; /* Adds a gold border */
     border-radius: 5px; /* Rounds the corners of the border */
     padding: 20px; /* Adds padding inside the section */
     margin: 20px; /* Adds spacing above and below the section and centers it */
@@ -303,14 +303,12 @@ table th {
     font-weight: bold; /* Makes the header text bold */
 }
 
-.Info {
-    float: left; /* Puts Info section on the left of page */
-    width: 65%; /* Takes up 65% of width page */
-}
+
 
 .StudentID {
     float: right; /* Puts StudentID section on the right of page */
     height: 265px; /* Height to match Info section */
+    margin-top: 36px;
 }
 
 .Tutor {
