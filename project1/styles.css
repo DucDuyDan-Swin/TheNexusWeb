@@ -167,7 +167,7 @@ aside {
 section {
     margin: 20px; /* Adds spacing around the section */
     padding: 20px; /* Adds padding inside the section */
-    border: 1px solid #C39131; /* Adds a border around the section */
+    border: 1.5px solid #C39131; /* Adds a border around the section */
     border-radius: 5px; /* Rounds the corners of the section */
 }
 
@@ -304,13 +304,17 @@ table th {
 }
 
 .Info {
-    float: left;
-    width: 65%;
+    float: left; /* Puts Info section on the left of page */
+    width: 65%; /* Takes up 65% of width page */
 }
 
 .StudentID {
+    float: right; /* Puts StudentID section on the right of page */
+    height: 265px; /* Height to match Info section */
+}
+
+.Tutor {
     float: right;
-    height: 265px;
 }
 
 /* Hover Name Effect (in table) */
