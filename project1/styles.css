@@ -5,7 +5,6 @@
 }
 
 .bgimg {
-    background-image: url('./images/background.png'); /* Sets the background image */
     background-size: cover; /* Ensures the image covers the entire area */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -31,12 +30,12 @@ nav {
 
 nav .nav-link a {
     font-family: 'Eightgon', sans-serif; /* Uses the custom font */
-    display: inline-block; /* Makes the nav links behave like inline elements */
-    text-decoration: none; /* Removes underline from links */
+    display: inline-block; /* Makoves unes the nav links behave like inline elements */
+    text-decoration: none; /* Remderline from links */
     color: white; /* Sets the text color to white */
     background-color: #014a66; /* Sets the background color of the nav links */
-    padding: 16px 2rem ; /* Adds padding inside the nav links */
-    font-size: 1.2rem; /* Sets the font size of the nav links */
+    padding: 5px 2rem ; /* Adds padding inside the nav links */
+    font-size: 1.1rem; /* Sets the font size of the nav links */
     border-radius: 5px; /* Rounds the corners of the nav links */
     white-space: wrap; /* Prevents text from wrapping */
     margin: 0px; /* Adds spacing between the nav links */
@@ -52,18 +51,19 @@ body {
     line-height: 1.6; /* Sets the line height for better readability */
     margin: 0; /* Removes default margin */
     padding: 0; /* Removes default padding */
-    background-color: #f4f4f4; /* Sets the background color of the body */
-    color: #2c3e50; /* Sets the default text color */
+    background: url('../images/background.png') no-repeat center center fixed; /* Sets the image as the background */
+    background-size: cover; /* Ensures the image covers the entire area */
+    color: #333; /* Sets the default text color */
+    opacity: 1; /* Sets the opacity of the body */
 }
 
 /* Header and Footer Styles */
 header, footer {
     position: relative; /* Positions the header and footer relative to their normal flow */
-    background: url('../images/background.png') no-repeat center center; /* Adds a background image */
     background-size: cover; /* Ensures the background image covers the entire area */
     color: #C39131; /* Sets the text color */
     text-align: center; /* Centers the text */
-    padding: 36px; /* Adds padding inside the header and footer */
+    padding: 28px; /* Adds padding inside the header and footer */
     margin: 0; /* Removes default margin */
 }
 
@@ -76,7 +76,15 @@ header h1, header p {
 }
 
 header h1 {
-    font-size: 3.6rem; /* Sets the font size of the header text */
+    font-size: 2.2rem; /* Sets the font size of the header text */
+}
+
+footer {
+    font-size: 1rem; /* Sets the font size of the footer text */
+    font-weight: bold; /* Makes the footer text bold */
+    background-color: #014a66; /* Sets the background color of the footer */
+    color: #C39131; /* Sets the text color to white */
+    padding: 0.5%; /* Adds padding inside the footer */
 }
 
 /* Aside Styles */
@@ -84,13 +92,8 @@ aside {
     width: 25%; /* Sets the width to 25% of the page */
     height: auto; /* Sets the height to auto */
     float: right; /* Floats the aside to the right */
-    border: 1.5px solid #C39131; /* Adds a gold border */
-    border-right: none; /* Removes the right border */
-    border-top-left-radius: 5px; /* Rounds the corners of the aside */
-    border-bottom-left-radius: 5px; /* Rounds the corners of the aside */
     padding: 15px; /* Adds padding inside the aside */
     margin: 20px; /* Adds margin around the aside */
-    margin-top: 25%; /* Adds margin above the aside */
     color: hotpink; /* Sets the text color */   
     background-color: #f4f4f4; /* Adds a light background color */
     opacity: 0; /* Sets the opacity of the aside */
@@ -101,24 +104,12 @@ main aside:hover {
     opacity: 1; /* Makes the aside fully visible on hover */
 }
 
-/* Logo Styles */
-.logo {
-    position: absolute; /* Positions the logo relative to the header */
-    top: 20%; /* Positions the logo 20px from the top */
-    left: 1%; /* Positions the logo 10px from the left */
-    width: 136px; /* Sets the width of the logo */
-    height: auto; /* Maintains the aspect ratio of the logo */
-}
-
-/* Responsive Image Styles */
-.logowithcap {
-    width: auto; /* Makes the image responsive to the viewport width */
-    max-width: 69%; /* Limits the maximum width of the image */
-    height: auto; /* Maintains the aspect ratio of the image */
-    display: block; /* Centers the image */
-    margin: 20px auto; /* Adds spacing and centers the image horizontally */
-    border: 0px solid #C39131; /* Optional: Adds a border */
-    border-radius: 10px; /* Adds rounded corners */
+main {
+    border-radius: 5px; /* Rounds the corners of the main content */
+    padding: 0px; /* Adds padding inside the main content */
+    margin-left: 10%; /* Adds margin to the left of the main content */
+    margin-right: 10%; /* Adds margin to the right of the main content */
+    background-color: #f4f4f4; /* Adds a light background color */
 }
 
 /* Join Our Team Section */
@@ -134,19 +125,10 @@ main aside:hover {
     color: #016a8a; /* Changes the color on hover */
 }
 
-/* Why Join Us Style */
-.why-join {
-    border: 1.5px solid #C39131; /* Adds a gold border */
-    border-radius: 5px; /* Rounds the corners of the border */
-    padding: 20px; /* Adds padding inside the section */
-    margin: 20px; /* Adds spacing above and below the section and centers it */
-    background-color: #f4f4f4; /* Adds a light background color */
-}
-
 /* Apply Now Button Styles */
 .apply-now-container {
     text-align: center; /* Centers the button horizontally */
-    margin: 20px 0; /* Adds spacing above and below the button */
+    margin-top: 25px; /* Adds spacing above and below the button */
 }
 
 .apply-now-button {
@@ -170,10 +152,10 @@ main aside:hover {
 
 /* Section Styles */
 section {
-    margin: 20px; /* Adds spacing around the section */
-    padding: 20px; /* Adds padding inside the section */
-    border: 1.5px solid #C39131; /* Adds a border around the section */
-    border-radius: 5px; /* Rounds the corners of the section */
+    margin: 0; /* Centers the section on the page */
+    padding: 3%; /* Adds padding inside the section */
+    padding-top: 1%; /* Adds padding at the top of the section */
+    border: 2.5px solid #C39131; /* Adds a border around the section */
 }
 
 /* Form Body Styles */
@@ -216,7 +198,7 @@ form select {
 }
 
 .form { /* Form container */
-    padding: 0.1px;
+    padding: 0px;
     max-width: 69%;
     margin: 0 auto; /* Centers the form on the page */
     background-color: #f4f4f4; /* Light background color */
@@ -314,6 +296,9 @@ table th {
     width: auto; /* Width to match Info section */
     margin-top: 36px; /* Aligns with the top of the Info section */
     margin-bottom: 36px; /* Aligns with the bottom of the Info section */
+    margin-left: 10px; /* Aligns with the left of the page */
+    border: 1px solid #C39131; /* Adds a gold border */
+    border-radius: 5px; /* Rounds the corners of the StudentID section */
 }
 
 .Tutor {
@@ -335,6 +320,25 @@ table th {
 
 #Tessy:hover{
     background-color: #ff0019; /* Colour is added when hovered */
+}
+hr {
+    border: 0; /* Removes default border */
+    height: 1px; /* Sets the height of the line */
+    background-color: #C39131; /* Sets the color of the line */
+    margin: 20px 0; /* Adds spacing above and below the line */
+}
+
+.social-media {
+    list-style-type: none; /* Removes default list styling */
+    justify-content: left; /* Centers the icons horizontally */
+}
+
+.maps {
+    width: 500px; /* Sets the width of the iframe */
+    height: 400px; /* Sets the height of the iframe */
+    border: 0; /* Removes the border */
+    display: block; /* Ensures proper layout */
+    margin: 0 auto; /* Centers the iframe horizontally */
 }
 
 /* Footer Link Styles */
