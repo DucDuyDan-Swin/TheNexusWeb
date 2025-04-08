@@ -67,23 +67,6 @@ header, footer {
     margin: 0; /* Removes default margin */
 }
 
-.header-container {
-    display: flex; /* Makes the header content align horizontally */
-    justify-content: center; /* Centers the header content horizontally */
-    align-items: center; /* Centers the header content vertically */
-}
-
-.header-text h1 {
-    margin: 0; /* Removes default margin */
-    font-size: 1.6rem; /* Sets the font size */
-}
-
-.header-text p {
-    margin: 0; /* Removes default margin */
-    font-size: 1.6rem; /* Sets the font size */
-    color: #555; /* Sets the text color */
-}
-
 header h1, header p {
     font-family: 'Eightgon', sans-serif; /* Uses the custom font */
     position: relative; /* Positions the text relative to its normal flow */
@@ -194,11 +177,6 @@ section {
 }
 
 /* Form Body Styles */
-/* The colour of the background outside the form */
-.form_body {
-    background-color: #82C8E5;
-    
-}
 form form {
     display: flex;
     flex-direction: column;
