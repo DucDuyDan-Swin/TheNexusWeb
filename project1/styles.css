@@ -163,13 +163,13 @@ form form {
     display: flex;
     flex-direction: column;
 }
-
+/* Form label font weight, margin, and colour*/
 form label {
     font-weight: bold;
     margin-bottom: 5px;
     color: #2c3e50;
 }
-/* the fieldset colour*/
+/* the fieldset colour and size*/
 form fieldset {
     margin-bottom: 15px;
     border: 1px solid #C39131;
@@ -186,6 +186,7 @@ form input[type="text"],
 form input[type="date"],
 form input[type="email"],
 form textarea,
+form input[type="file"]
 form select {
     padding: 10px;
     margin-bottom: 15px;
@@ -212,6 +213,11 @@ form select {
  
  .technical_skill {
     width: auto; /* Sets the width of the technical skill fieldset */
+ }
+
+ .file {
+    font-size: 16px;
+    width: 30%;
  }
 /* the submit button size and colour*/
  form input[type="submit"] {

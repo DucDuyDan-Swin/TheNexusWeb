@@ -84,7 +84,7 @@
 
                 <!-- Email -->
                 <label for="email">Email:</label>
-                <input type="text" id="email" name="email" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" required><br><br> <!--The pattern was from HTML validations patterns in week 03 -->
+                <input type="text" id="email" name="email" pattern="[A-Za-z0-9._%+-](@)[A-Za-z0-9.-](.)[A-Za-z]{2,}$" required><br><br> <!--The pattern was from HTML validations patterns in week 03 -->
 
                 <!-- Phone Number -->
                 <label for="phone">Phone Number:</label>
@@ -119,7 +119,15 @@
                 <label for="other-skills">Other Skills:</label>
                 <br>
                 <textarea id="other-skills" name="other-skills" rows="4" cols="50" placeholder="Write any additional skills that you have on this box...."></textarea><br><br>
-
+                <br>
+                <!--Upload CV PDF File-->
+                <label for="CV_upload">Upload Your CV Bellow (PDF only)</label>
+                <br>
+                <fieldset class="file">
+                <input type="file" id="cv" name="cv" accept=".pdf" required>
+                </fieldset>
+                <br><br><br><br>
+              
                 <!-- Submit Button -->
                 <input type="submit" class="submit-button">
             </form>
