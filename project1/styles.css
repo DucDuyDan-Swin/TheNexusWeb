@@ -206,6 +206,19 @@ form select {
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+section li {
+    display: inline-block;
+    padding: 0;
+    margin: 0 auto;
+    list-style-type: none; /* Removes default list styling */
+    justify-content: center; /* Centers the icons horizontally */
+}
+.it_images {
+    padding: 0px;
+    max-width: auto; 
+    max-height: 200px;
+}
+
 .form { /* Form container */
     padding: 0px;
     max-width: 69%;
@@ -342,11 +355,6 @@ hr {
     height: 1px; /* Sets the height of the line */
     background-color: #C39131; /* Sets the color of the line */
     margin: 20px 0; /* Adds spacing above and below the line */
-}
-
-.social-media {
-    list-style-type: none; /* Removes default list styling */
-    justify-content: left; /* Centers the icons horizontally */
 }
 
 .maps {
