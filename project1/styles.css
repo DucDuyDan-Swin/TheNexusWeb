@@ -295,7 +295,7 @@ table th {
 }
 
 
-
+/* Student ID Section */
 .StudentID {
     float: right; /* Puts StudentID section on the right of page */
     height: auto; /* Height to match Info section */
@@ -327,6 +327,8 @@ table th {
 #Tessy:hover{
     background-color: #ff0019; /* Colour is added when hovered */
 }
+
+
 hr {
     border: 0; /* Removes default border */
     height: 1px; /* Sets the height of the line */
