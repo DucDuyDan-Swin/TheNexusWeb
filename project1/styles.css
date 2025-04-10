@@ -78,6 +78,14 @@ header h1, header p {
 header h1 {
     font-size: 2.2rem; /* Sets the font size of the header text */
 }
+/* Logo Styles */
+.logo {
+    position: absolute; /* Positions the logo relative to the header */
+    top: 20%; /* Positions the logo 20px from the top */
+    left: 1%; /* Positions the logo 10px from the left */
+    width: 96px; /* Sets the width of the logo */
+    height: auto; /* Maintains the aspect ratio of the logo */
+}
 
 footer {
     font-size: 1rem; /* Sets the font size of the footer text */
