@@ -343,10 +343,12 @@ hr {
     width: 500px; /* Sets the width of the iframe */
     height: 400px; /* Sets the height of the iframe */
     border: 0; /* Removes the border */
-    display: block; /* Ensures proper layout */
-    margin: 0 auto; /* Centers the iframe horizontally */
 }
-
+figure {
+    display: block;
+    margin: 0 auto;
+    float: right;
+}
 /* Footer Link Styles */
 .footer-link {
     color: #C39131; /* Sets the link text color */
