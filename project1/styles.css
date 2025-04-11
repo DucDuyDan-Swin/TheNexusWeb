@@ -206,17 +206,27 @@ form select {
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-section li {
-    display: inline-block;
-    padding: 0;
-    margin: 0 auto;
-    list-style-type: none; /* Removes default list styling */
-    justify-content: center; /* Centers the icons horizontally */
+.project ul {
+    display: flex; /* Makes the list items display in a row */
+    flex-wrap: wrap; /* Allows wrapping to the next row if needed */
+    justify-content: space-between; /* Adds space between items */
+    padding: 0; /* Removes default padding */
+    list-style: none; /* Removes default list styling */
+    margin: 0; /* Removes default margin */
+}
+
+.project li { 
+    flex: 1 1 calc(25% - 20px); /* Each item takes 25% of the row minus spacing and dont shrink (Dan found this on stackoverflow when seaching the uses of display:flex */
+    margin: 10px; /* Adds spacing between items */
+    margin-top: 0; /* Removes top margin */
+    margin-bottom: 0; /* Removes bottom margin */
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+    text-align: center; /* Centers the content inside each item */
 }
 .it_images {
-    padding: 0px;
-    max-width: auto; 
-    max-height: 200px;
+    width: 100%; /* Makes the image responsive */
+    max-height: 55%; /* Maintains aspect ratio */
+    border-radius: 5px; /* Optional: Adds rounded corners */
 }
 
 .form { /* Form container */
@@ -358,8 +368,8 @@ hr {
 }
 
 .maps {
-    width: 500px; /* Sets the width of the iframe */
-    height: 400px; /* Sets the height of the iframe */
+    width: 350px; /* Sets the width of the iframe */
+    height: 250px; /* Sets the height of the iframe */
     border: 0; /* Removes the border */
 }
 figure {
