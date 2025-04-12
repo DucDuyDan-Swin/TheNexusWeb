@@ -339,7 +339,7 @@ table th {
 }
 
 .Tutor {
-    float: right;
+    float: right; /* Puts Tutor's name on the right of page (inside Student ID section) */
 }
 
 /* Hover Name Effect (in table) */
