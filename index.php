@@ -1,39 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--The logo was created on design.com https://www.design.com/maker/logo/elegant-rectangle-letter-n-576322?text=Nexus&isVariation=True&searchImpressionId=e57eb4fd-9f14-4905-9944-216dc884006b -->
-    <meta name="description" content="Nexus front page">
-    <meta name="keywords" content="Nexus front page, nexus company">
-    <title>Welcome to Nexus</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="../images/logo.png" type="image/png" class="bgimg">
-</head>
-<body>
-    <header>
-        <a href="../project1/index.html">
-            <img src="../images/logo.png" alt="Nexus Logo" class="logo">
-        </a>
-        <h1>Welcome to Nexus</h1>
-        <p>Our future starts here</p>
-       
-    </header>
-    <nav>
-        <def class="nav-link">
-            <ul>
-                <li><a href="index.html" class="nav-link"><strong>Home</strong></a></li>
-                <li><a href="jobs.html" class="nav-link"><strong>Job Opportunities</strong></a></li>
-                <li><a href="apply.html" class="nav-link"><strong>Apply Now</strong></a></li>
-                <li><a href="about.html" class="nav-link"><strong>About Us</strong></a></li>
-            </ul>
-        </def>
-    </nav>
+<?php include 'header.inc'; ?>
     <main>
         <section> 
-            <figure>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13184.558059264242!2d145.01831259954918!3d-37.822376090929914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642326bae5aaf%3A0x75e96bbd4988f769!2sSwinburne%20University%20of%20Technology!5e0!3m2!1sen!2sau!4v1744096588420!5m2!1sen!2sau" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="maps"></iframe>
-            <figcaption>Our location</figcaption>
-            </figure>
             <h2>About Nexus</h2>
                 <p>Nexus is a global leader in the IT industry, renowned for delivering innovative solutions and cutting-edge technology to businesses of all sizes. Established with a vision to revolutionize the digital landscape, Nexus has consistently pushed the boundaries of what is possible in the world of technology. Our mission is to empower organizations by providing them with the tools, expertise, and support they need to thrive in an increasingly competitive and fast-paced digital era.</p>
                 <p>At Nexus, we specialize in a wide range of services, including software development, data analytics, cloud computing, artificial intelligence, and cybersecurity. Our team of highly skilled professionals works tirelessly to design and implement solutions that are not only efficient but also scalable and future-proof. We pride ourselves on our ability to adapt to the unique needs of each client, ensuring that every project we undertake delivers measurable results and exceeds expectations.</p>
@@ -41,27 +8,27 @@
                 <p>Over the years, Nexus has earned a reputation for excellence, working with some of the most prominent organizations across various industries. From startups to multinational corporations, our clients trust us to deliver solutions that drive growth, enhance efficiency, and unlock new opportunities. We are proud to be at the forefront of technological innovation, constantly exploring new ways to solve complex challenges and create value for our clients.</p>
                 <p>As we look to the future, Nexus remains committed to staying ahead of the curve, embracing emerging technologies, and continuing to set new standards of excellence in the IT industry. Whether you are looking to transform your business, enhance your digital capabilities, or embark on a new career in tech, Nexus is here to help you achieve your goals. Join us on this exciting journey and discover what it means to be part of a company that is shaping the future of technology.</p>
                 <h2>Projects</h2>
-                <p>Previously worked on projects</p>    
+                <p>Previously worked on projects:</p>    
                 <div class="project">
                     <ul>
                         <li>
                             <h3>Project 1: Think Differently Mind Map</h3>
-                            <img class="it_images" src="../images/Project_img_1.jpg" alt="Think differently mind map">
+                            <img class="it_images" src="images/Project_img_1.jpg" alt="Think differently mind map">
                             <p>A mind map to help students understand the concept of thinking differently.</p>
                         </li>
                         <li>
                             <h3>Project 2: Project Management</h3>
-                            <img class="it_images" src="../images/Project_img_2.jpg" alt="project management">
+                            <img class="it_images" src="images/Project_img_2.jpg" alt="project management">
                             <p>A project management tool to help teams collaborate effectively.</p>
                         </li>
                         <li>
                             <h3>Project 3: Digital Transformation</h3>
-                            <img class="it_images" src="../images/Project_img_3.jpg" alt="digital">
+                            <img class="it_images" src="images/Project_img_3.jpg" alt="digital">
                             <p>A client in their digital transformation journey.</p>
                         </li>
                         <li>
                             <h3>Project 4: Robotics System</h3>
-                            <img class="it_images" src="../images/Project_image_4.jpg" alt="Robot">
+                            <img class="it_images" src="images/Project_image_4.jpg" alt="Robot">
                             <p>We designed and built a robotic system for a manufacturing client.</p>
                         </li>
                     </ul>
@@ -77,7 +44,6 @@
             <p>If you have any questions or would like to learn more about Nexus, please feel free to reach out to us. We are here to help!</p>
     </section>
     </main>
-    <footer>
-        <p>&copy;<a href="https://github.com/DucDuyDan-Swin/TheNexusWeb" target="Our GitHub Link" class="footer-link">2025 Nexus. All rights reserved.</a> &nbsp; | &nbsp; <a href="mailto:nexusweb4321@gmail.com" class="footer-link">Contact Us</a></p>
+<?php include 'footer.inc'; ?>
 </body>
 </html>

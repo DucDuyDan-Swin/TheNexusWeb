@@ -130,7 +130,12 @@
                 <label for="cv">Upload Your CV Below (PDF only)</label>
                 <br>
                 <fieldset class="file">
+<<<<<<< HEAD:apply.php
+                <input type="file" name="resume" id="resume">
+                <small>Uploading a resume is optional.</small>
+=======
                 <input type="file" id="cv" name="cv" accept=".pdf"> <!--The input type was searched on google and double checked using AI-->
+>>>>>>> 3ac5b4ca02ec921faa6d602f4ba8f99c9173de76:project1/apply.html
                 </fieldset>
                 <br><br><br><br>
               
