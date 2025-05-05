@@ -1,34 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--The logo was created on design.com https://www.design.com/maker/logo/elegant-rectangle-letter-n-576322?text=Nexus&isVariation=True&searchImpressionId=e57eb4fd-9f14-4905-9944-216dc884006b -->
-    <meta name="description" content="Nexus - A global leader in IT solutions, offering innovative technology services like AI, cloud computing, and cybersecurity.">
-    <meta name="keywords" content="Nexus, IT solutions, technology, AI, cloud computing, cybersecurity, software development">
-    <title>Job Opportunities at Nexus</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/logo.png" type="image/png" class="bgimg">
-    <!--This was created by ChatGPT with the promt "selection box pop up went click on" -->
-</head>
-<body>
-    <header>
-        <a href="index.html">
-            <img src="images/logo.png" alt="Nexus Logo" class="logo">
-        </a>
-        <h1>Join our Crew</h1>
-        <p>at NEXUS</p>
-    </header>
-    <nav>
-        <def class="nav-link">
-            <ul>
-                <li><a href="index.html" class="nav-link"><strong>Home</strong></a></li>
-                <li><a href="jobs.html" class="nav-link"><strong>Job Opportunities</strong></a></li>
-                <li><a href="apply.html" class="nav-link"><strong>Apply Now</strong></a></li>
-                <li><a href="about.html" class="nav-link"><strong>About Us</strong></a></li>
-            </ul>
-        </def>
-    </nav>
-
+<title>Job Opportunities</title>
+<?php include 'header.inc'; ?>
+<?php include 'nav.inc'; ?>
     <main>
         <aside class="job-tips">
             <h3>Application Tips</h3>
@@ -133,8 +105,6 @@
             </div>
         </section>
     </main>
-    <footer>
-        <p>&copy;<a href="https://nexuswebs.atlassian.net/jira/software/projects/SCRUM/boards/1" target="Our Jira Project" class="footer-link">2025 Nexus. All rights reserved.</a> &nbsp; | &nbsp; <a href="mailto:nexusweb4321@gmail.com" class="footer-link">Contact Us</a></p>
-    </footer>
+    <?php include 'footer.inc'; ?>
 </body>
 </html>

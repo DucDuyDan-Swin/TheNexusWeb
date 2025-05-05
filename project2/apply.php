@@ -1,32 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--The logo was created on design.com https://www.design.com/maker/logo/elegant-rectangle-letter-n-576322?text=Nexus&isVariation=True&searchImpressionId=e57eb4fd-9f14-4905-9944-216dc884006b -->
-    <meta name="description" content="Nexus apply page">
-    <meta name="keywords" content="Nexus apply page, nexus apply form">
-    <title>Apply for a Job at Nexus</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="../images/logo.png" type="image/png" class="bgimg">
-</head>
-<body class="form_body">
-    <header>
-        <a href="../project1/index.html">
-            <img src="../images/logo.png" alt="Nexus Logo" class="logo">
-        </a>
-        <h1>Apply for a job</h1>
-        <p>Join our team at Nexus</p>
-    </header>
-    <nav>
-        <def class="nav-link">
-            <ul>
-                <li><a href="index.html" class="nav-link"><strong>Home</strong></a></li>
-                <li><a href="jobs.html" class="nav-link"><strong>Job Opportunities</strong></a></li>
-                <li><a href="apply.html" class="nav-link"><strong>Apply Now</strong></a></li>
-                <li><a href="about.html" class="nav-link"><strong>About Us</strong></a></li>
-            </ul>
-        </def>
-    </nav>
+<title>Appy Now</title>
+<?php include 'header.inc'; ?>
+<?php include 'nav.inc'; ?>
     <main class="form">
         <section>
             <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" target="_blank">
@@ -128,21 +102,18 @@
 
                 <!--Upload CV PDF File-->
                 <label for="cv">Upload Your CV Below (PDF only)</label>
+                <small>Uploading a resume is optional.</small>
                 <br>
                 <fieldset class="file">
-                <input type="file" name="resume" id="resume">
-                <small>Uploading a resume is optional.</small>
-                <input type="file" id="cv" name="cv" accept=".pdf"> <!--The input type was searched on google and double checked using AI-->
+                <input type="file" id="cv" name="cv" accept=".pdf">
                 </fieldset>
                 <br><br><br><br>
               
                 <!-- Submit Button -->
-                <input type="submit" value="job_apply" class="submit-button">
+                <input type="submit" value="Apply" class="submit-button">
             </form>
         </section>
     </main>
-    <footer>
-        <p>&copy;<a href="https://nexuswebs.atlassian.net/jira/software/projects/SCRUM/boards/1" target="Our Jira Project" class="footer-link">2025 Nexus. All rights reserved.</a> &nbsp; | &nbsp; <a href="mailto:nexusweb4321@gmail.com" class="footer-link">Contact Us</a></p>
-    </footer>
+    <?php include 'footer.inc'; ?>
 </body>
 </html>

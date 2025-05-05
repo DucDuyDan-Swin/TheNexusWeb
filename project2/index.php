@@ -1,4 +1,6 @@
+<title>Welcome to Nexus</title>
 <?php include 'header.inc'; ?>
+<?php include 'nav.inc'; ?>
     <main>
         <section> 
             <h2>About Nexus</h2>
@@ -7,38 +9,10 @@
                 <p>Our company culture is built on the principles of innovation, collaboration, and inclusivity. We believe that the best ideas come from diverse perspectives, and we are committed to fostering an environment where creativity and talent can flourish. Nexus is more than just a technology company; we are a community of forward-thinkers dedicated to making a positive impact on the world through technology.</p>
                 <p>Over the years, Nexus has earned a reputation for excellence, working with some of the most prominent organizations across various industries. From startups to multinational corporations, our clients trust us to deliver solutions that drive growth, enhance efficiency, and unlock new opportunities. We are proud to be at the forefront of technological innovation, constantly exploring new ways to solve complex challenges and create value for our clients.</p>
                 <p>As we look to the future, Nexus remains committed to staying ahead of the curve, embracing emerging technologies, and continuing to set new standards of excellence in the IT industry. Whether you are looking to transform your business, enhance your digital capabilities, or embark on a new career in tech, Nexus is here to help you achieve your goals. Join us on this exciting journey and discover what it means to be part of a company that is shaping the future of technology.</p>
-                <h2>Projects</h2>
-                <p>Previously worked on projects:</p>    
-                <div class="project">
-                    <ul>
-                        <li>
-                            <h3>Project 1: Think Differently Mind Map</h3>
-                            <img class="it_images" src="images/Project_img_1.jpg" alt="Think differently mind map">
-                            <p>A mind map to help students understand the concept of thinking differently.</p>
-                        </li>
-                        <li>
-                            <h3>Project 2: Project Management</h3>
-                            <img class="it_images" src="images/Project_img_2.jpg" alt="project management">
-                            <p>A project management tool to help teams collaborate effectively.</p>
-                        </li>
-                        <li>
-                            <h3>Project 3: Digital Transformation</h3>
-                            <img class="it_images" src="images/Project_img_3.jpg" alt="digital">
-                            <p>A client in their digital transformation journey.</p>
-                        </li>
-                        <li>
-                            <h3>Project 4: Robotics System</h3>
-                            <img class="it_images" src="images/Project_image_4.jpg" alt="Robot">
-                            <p>We designed and built a robotic system for a manufacturing client.</p>
-                        </li>
-                    </ul>
-                </div>
             <div class="join-team">
                 <h2>Join Our Team</h2>
                 <p>Looking for a dynamic career in tech? Explore our <a href="jobs.html">Job Opportunities</a> and be part of our growing team.</p>
-            </div>
-            
-                
+            </div> 
             <div class="contact-info">
             <h2>Contact Us</h2>
             <p>If you have any questions or would like to learn more about Nexus, please feel free to reach out to us. We are here to help!</p>
