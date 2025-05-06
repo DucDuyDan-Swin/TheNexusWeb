@@ -3,7 +3,7 @@
 <?php include 'nav.inc'; ?>
     <main>
         <aside class="job-tips">
-            <h3>Application Tips</h3>
+            <h2>Application Tips</h2>
             <ul>
                 <li>Tailor your resume to highlight relevant skills and experiences.</li>
                 <li>Prepare for interviews by researching Nexus and its projects.</li>

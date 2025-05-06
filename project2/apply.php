@@ -104,9 +104,9 @@
                 <label for="cv">Upload Your CV Below (PDF only)</label>
                 <small>Uploading a resume is optional.</small>
                 <br>
-                <fieldset class="file">
+                <section class="file">
                 <input type="file" id="cv" name="cv" accept=".pdf">
-                </fieldset>
+                </section>
                 <br><br><br><br>
               
                 <!-- Submit Button -->

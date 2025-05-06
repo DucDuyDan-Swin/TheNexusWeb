@@ -250,6 +250,13 @@ form select {
     font-size: 16px;
     width: 30%;
  }
+
+ .file {
+    margin: 0; /* Centers the section on the page */
+    padding: 5%; /* Adds padding inside the section */
+    padding-top: 1%; /* Adds padding at the top of the section */
+    border: 1px solid #C39131; /* Adds a border around the section */
+ }
 /* the submit button size and colour*/
  form input[type="submit"] {
      padding: 10px;
