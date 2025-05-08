@@ -2,6 +2,10 @@
 <title>About Nexus</title>
 </head>
 <body>
+    <header>
+        <h1>About</h1>
+        <p>Learn About Our Team</p>
+    </header>
 <?php include 'nav.inc'; ?>
     <main>
         <section>

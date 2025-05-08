@@ -2,6 +2,10 @@
 <title>Appy Now</title>
 </head>
 <body>
+    <header>
+    <h1>Job Applications</h1>
+    <p>Apply Our Available Jobs!</p>
+    </header>
 <?php include 'nav.inc'; ?>
     <main class="form">
         <section>

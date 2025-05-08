@@ -2,6 +2,11 @@
 <title>Job Opportunities</title>
 </head>
 <body>
+    <header>
+      <h1>Available Jobs</h1>
+      <p>See Our Positions!</p>
+    </header>
+
 <?php include 'nav.inc'; ?>
     <main>
         <aside class="job-tips">
