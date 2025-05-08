@@ -1,9 +1,9 @@
 <?php include 'header.inc'; ?>
-<title>Appy Now</title>
+<title>Apply Now</title>
 </head>
 <body>
     <header>
-    <h1>Job Applications</h1>
+    <h1>Apply Now</h1>
     <p>Apply Our Available Jobs!</p>
     </header>
 <?php include 'nav.inc'; ?>
