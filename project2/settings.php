@@ -1,7 +1,7 @@
 <?php
 // Database connection settings (default XAMPP)
 $host = "localhost";
-$database = "nexusweb_db";
+$database = "nexus_db";
 $username = "root";
 $password = "";
 

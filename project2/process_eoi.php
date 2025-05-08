@@ -83,6 +83,7 @@ $create = "CREATE TABLE IF NOT EXISTS eoi (
     skill8 VARCHAR(50),
     skill9 VARCHAR(50),
     skill10 VARCHAR(50),
+
     other_skills TEXT,
     status VARCHAR(10) DEFAULT 'New'
 )";
