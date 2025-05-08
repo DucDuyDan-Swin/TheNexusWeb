@@ -1,5 +1,7 @@
-<title>About Nexus</title>
 <?php include 'header.inc'; ?>
+<title>About Nexus</title>
+</head>
+<body>
 <?php include 'nav.inc'; ?>
     <main>
         <section>

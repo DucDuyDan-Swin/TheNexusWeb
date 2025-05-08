@@ -1,5 +1,7 @@
-<title>Job Opportunities</title>
 <?php include 'header.inc'; ?>
+<title>Job Opportunities</title>
+</head>
+<body>
 <?php include 'nav.inc'; ?>
     <main>
         <aside class="job-tips">

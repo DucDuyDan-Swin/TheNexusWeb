@@ -61,9 +61,9 @@ body {
 header, footer {
     position: relative; /* Positions the header and footer relative to their normal flow */
     background-size: cover; /* Ensures the background image covers the entire area */
-    color: #C39131; /* Sets the text color */
+    color: white; /* Sets the text color */
     text-align: center; /* Centers the text */
-    padding: 28px; /* Adds padding inside the header and footer */
+    padding: 2%; /* Adds padding inside the header and footer */
     margin: 0; /* Removes default margin */
 }
 
@@ -91,7 +91,7 @@ footer {
     font-size: 1rem; /* Sets the font size of the footer text */
     font-weight: bold; /* Makes the footer text bold */
     background-color: #014a66; /* Sets the background color of the footer */
-    color: #C39131; /* Sets the text color to white */
+    color: white; /* Sets the text color to white */
     padding: 0.5%; /* Adds padding inside the footer */
 }
 
@@ -386,6 +386,6 @@ figure {
 }
 /* Footer Link Styles */
 .footer-link {
-    color: #C39131; /* Sets the link text color */
+    color: white; /* Sets the link text color */
     text-decoration: none; /* Removes underline from links */
 }

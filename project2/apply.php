@@ -1,5 +1,7 @@
-<title>Appy Now</title>
 <?php include 'header.inc'; ?>
+<title>Appy Now</title>
+</head>
+<body>
 <?php include 'nav.inc'; ?>
     <main class="form">
         <section>
