@@ -62,7 +62,7 @@ $conn = mysqli_connect($host, $username, $password, $database);
 // Create table if not exists
 $create = "CREATE TABLE IF NOT EXISTS eoi (
     EOInumber INT AUTO_INCREMENT PRIMARY KEY,
-    job_ref VARCHAR(20),
+    job_ref VARCHAR(50),
     first_name VARCHAR(20),
     last_name VARCHAR(20),
     dob DATE,
@@ -71,11 +71,18 @@ $create = "CREATE TABLE IF NOT EXISTS eoi (
     suburb VARCHAR(40),
     state VARCHAR(3),
     postcode VARCHAR(4),
-    email VARCHAR(255),
+    email VARCHAR(100),
     phone VARCHAR(12),
-    skill1 VARCHAR(100),
-    skill2 VARCHAR(100),
-    skill3 VARCHAR(100),
+    skill1 VARCHAR(50),
+    skill2 VARCHAR(50),
+    skill3 VARCHAR(50),
+    skill4 VARCHAR(50),
+    skill5 VARCHAR(50),
+    skill6 VARCHAR(50),
+    skill7 VARCHAR(50),
+    skill8 VARCHAR(50),
+    skill9 VARCHAR(50),
+    skill10 VARCHAR(50),
     other_skills TEXT,
     status VARCHAR(10) DEFAULT 'New'
 )";
