@@ -2,6 +2,10 @@
 <title>Job Opportunities</title>
 </head>
 <body>
+    <header>
+        <h1>Welcome to Nexus</h1>
+        <p>Our future starts here</p>
+    </header>
 <?php include 'nav.inc'; ?>
     <main>
         <aside class="job-tips">

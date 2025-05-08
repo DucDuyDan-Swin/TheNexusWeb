@@ -53,6 +53,7 @@ body {
     padding: 0; /* Removes default padding */
     background: url('../images/background.png') no-repeat center center fixed; /* Sets the image as the background */
     background-size: cover; /* Ensures the image covers the entire area */
+    background-color: #333; /* Sets a fallback background color */
     color: #333; /* Sets the default text color */
     opacity: 1; /* Sets the opacity of the body */
 }
@@ -117,7 +118,6 @@ main {
     padding: 0px; /* Adds padding inside the main content */
     margin-left: 10%; /* Adds margin to the left of the main content */
     margin-right: 10%; /* Adds margin to the right of the main content */
-    background-color: #f4f4f4; /* Adds a light background color */
 }
 
 /* Join Our Team Section */
@@ -164,6 +164,7 @@ section {
     padding: 3%; /* Adds padding inside the section */
     padding-top: 1%; /* Adds padding at the top of the section */
     border: 2.5px solid #C39131; /* Adds a border around the section */
+    background-color: white;
 }
 
 /* Form Body Styles */
