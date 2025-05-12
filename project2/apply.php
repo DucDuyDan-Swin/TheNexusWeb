@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <?php include 'header.inc'; ?>
 <title>Apply Now</title>
 </head>
