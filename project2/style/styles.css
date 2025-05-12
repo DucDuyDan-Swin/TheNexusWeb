@@ -11,40 +11,90 @@
     width: 100%; /* Sets the width to 100% of the viewport */
 }
 
-/* Navigation Menu */
+/* Navigation Menu Position */
 nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul {
     background-color: #014a66; /* Sets the background color of the navigation bar */
-    padding: 1%; /* Adds padding inside the navigation bar */
-    text-align: center; /* Centers the navigation links */
-    position: sticky; /* Positions the nav relative to its normal flow */
-    z-index: 69; /* Ensures the nav is above other elements */
     margin: 0px; /* Removes default margin */
     padding: 0.1%; /* Removes default padding */
     top: 0; /* Positions the nav at the top of the viewport */
     width: 100%; /* Sets the width to 100% of the viewport */
+    list-style: none; /* Removes default list styling */
+    display: flex; /* Makes the nav a flex container */
+    justify-content: center; /* Aligns items to the center */
+    align-items: center; /* Vertically centers items */
 }
 
-.nav-link li {
-    display: inline-block; /* Makes the list items behave like inline elements */
+nav ol {
+    display: none;
 }
-
-nav .nav-link a {
+/* Navigation Text */
+#nav-link {
     font-family: 'Eightgon', sans-serif; /* Uses the custom font */
-    display: inline-block; /* Makoves unes the nav links behave like inline elements */
     text-decoration: none; /* Remderline from links */
     color: white; /* Sets the text color to white */
-    background-color: #014a66; /* Sets the background color of the nav links */
-    padding: 5px 2rem ; /* Adds padding inside the nav links */
-    font-size: 1.1rem; /* Sets the font size of the nav links */
-    border-radius: 5px; /* Rounds the corners of the nav links */
-    white-space: wrap; /* Prevents text from wrapping */
-    margin: 0px; /* Adds spacing between the nav links */
 }
 
-nav .nav-link a:hover {
+/* Navigation List */
+nav li {
+    height: auto; /* Sets the height of the list items */
+}
+
+nav a{
+    height: 100%; /* Sets the height of the anchor tags */
+    padding: 0 30px; /* Adds padding inside the anchor tags */
+    text-decoration: none; /* Removes underline from links */
+    align-items: center; /* Vertically centers the text */
+    color: white; /* Sets the text color to white */
+    font-size: 1.2rem; /* Sets the font size */
+}
+
+.nav-link :hover {
     background-color: #016a8a; /* Changes the background color on hover */
 }
 
+/* Navigation Toggle for Mobile */
+.open-menu {
+    display: none; /* Hides the sidebar toggle button */
+    justify-content: flex-start; /* Aligns items to the start of the sidebar */
+}
+.sidebar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hides the navigation bar on smaller screens */
+    }
+    .sidebar{
+        position: sticky; /* Positions the sidebar relative to its normal flow */
+        top: 10%; /* Positions the sidebar at the top of the viewport */
+        height: auto; /* Sets the height to 100% of the viewport */
+        width: 100vw; /* Sets the width of the sidebar */
+        z-index: 69; /* Ensures the sidebar is above other elements */
+        background-color: #01496669; /* Sets the background color of the sidebar */
+        backdrop-filter: blur(5px); /* Adds a blur effect to the background */
+        display: none; /* Makes the sidebar a flex container */
+        flex-direction: column; /* Aligns items in a column */
+        align-items: center; /* Aligns items to the start of the sidebar */
+        justify-items: center; /* Aligns items to the start of the sidebar */
+    }
+    nav ol {
+        background-color: #014a66; /* Sets the background color of the sidebar */
+        list-style: none; /* Removes underline from links */
+        display: flex; /* Displays the sidebar toggle button */
+        justify-content: center; /* Centers the button */
+        align-items: center; /* Vertically centers the button */
+        margin: 0; /* Removes default margin */
+        padding: 0; /* Removes default padding */
+    }
+}
+    
 /* Body Styles */
 body {
     font-family: Arial, sans-serif; /* Sets the font family for the body */

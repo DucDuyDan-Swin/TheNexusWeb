@@ -3,13 +3,12 @@
 </head>
 <body>
     <header>
-        <h1>About</h1>
+        <h1>About Us</h1>
         <p>Learn About Our Team</p>
     </header>
 <?php include 'nav.inc'; ?>
     <main>
         <section>
-           
             <h2>Group Information</h2>
             <p>Welcome to our group page! Here’s everything you need to know about us.</p>
 
