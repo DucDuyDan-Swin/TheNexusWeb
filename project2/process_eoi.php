@@ -128,6 +128,7 @@ mysqli_close($dbconn);
 
 // Show confirmation
 $_SESSION['success_message'] = "Your application has been submitted! Your EOI number is: " . $eoi_number;
+$_SESSION['form_data'] = $_POST;  //
 header("Location: confirmation.php");
 exit();
 ?>
