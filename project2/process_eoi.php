@@ -38,14 +38,20 @@ if (!$job_ref) $errors[] = "Job reference is required.";
 if (!$first_name || strlen($first_name) > 20 || !ctype_alpha($first_name)) $errors[] = "First name must be 1-20 letters.";
 if (!$last_name || strlen($last_name) > 20 || !ctype_alpha($last_name)) $errors[] = "Last name must be 1-20 letters.";
 if (!preg_match("/^\d{2}\/\d{2}\/\d{4}$/", $dob)) $errors[] = "Date of birth must be dd/mm/yyyy.";
+if (!checkdate($dob_parts[1], $dob_parts[0], $dob_parts[2])) {
+    $errors[] = "Invalid date of birth.";
+}
 if (!$gender) $errors[] = "Gender is required.";
-if (!$street || strlen($street) > 40) $errors[] = "Street address must be 1-40 chars.";
+if (!$address || strlen($address) > 40) $errors[] = "Street address must be 1-40 chars.";
 if (!$suburb || strlen($suburb) > 40) $errors[] = "Suburb must be 1-40 chars.";
 if (!in_array($state, ['VIC','NSW','QLD','NT','WA','SA','TAS','ACT'])) $errors[] = "Invalid state.";
 if (!preg_match("/^\d{4}$/", $postcode)) $errors[] = "Postcode must be 4 digits.";
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Invalid email.";
 if (!preg_match("/^\d{8,12}$/", $phone)) $errors[] = "Phone must be 8-12 digits.";
 if (empty($skills)) $errors[] = "Select at least one skill.";
+if (in_array("Other", $skills) && empty($other_skills)) {
+    $errors[] = "Please describe your other skills.";
+}
 
 // If errors, redirect back with errors
 if ($errors) {
@@ -60,7 +66,7 @@ $dob_parts = explode('/', $dob);
 $mysql_dob = $dob_parts[2] . '-' . $dob_parts[1] . '-' . $dob_parts[0];
 
 // Connect to DB
-$dbconn = mysqli_connect($host, $username, $password, $database);
+$dbconn = mysqli_connect($host, $username, $password, $sql_db);
 
 // Create table if not exists
 $create = "CREATE TABLE IF NOT EXISTS eoi (
@@ -70,7 +76,7 @@ $create = "CREATE TABLE IF NOT EXISTS eoi (
     last_name VARCHAR(20),
     dob DATE,
     gender VARCHAR(10),
-    street VARCHAR(40),
+    address VARCHAR(40),
     suburb VARCHAR(40),
     state VARCHAR(3),
     postcode VARCHAR(4),
@@ -105,6 +111,8 @@ $skill9 = $skills[8] ?? '';
 $skill10 = $skills[9] ?? '';
 
 // Insert EOI
+$status = "New";
+
 $stmt = mysqli_prepare($dbconn, "INSERT INTO eoi
     (job_ref, first_name, last_name, dob, gender, address, suburb, state, postcode, email, phone, skill1, skill2, skill3, skill4, skill5, skill6, skill7, skill8, skill9, skill10, other_skills)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?)");
