@@ -22,7 +22,7 @@ $first_name = clean($_POST['first_name'] ?? '');
 $last_name  = clean($_POST['last_name'] ?? '');
 $dob        = clean($_POST['dob'] ?? '');
 $gender     = clean($_POST['gender'] ?? '');
-$street     = clean($_POST['street'] ?? '');
+$address     = clean($_POST['address'] ?? '');
 $suburb     = clean($_POST['suburb'] ?? '');
 $state      = clean($_POST['state'] ?? '');
 $postcode   = clean($_POST['postcode'] ?? '');
@@ -106,10 +106,10 @@ $skill10 = $skills[9] ?? '';
 
 // Insert EOI
 $stmt = mysqli_prepare($dbconn, "INSERT INTO eoi
-    (job_ref, first_name, last_name, dob, gender, street, suburb, state, postcode, email, phone, skill1, skill2, skill3, skill4, skill5, skill6, skill7, skill8, skill9, skill10, other_skills)
+    (job_ref, first_name, last_name, dob, gender, address, suburb, state, postcode, email, phone, skill1, skill2, skill3, skill4, skill5, skill6, skill7, skill8, skill9, skill10, other_skills)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?)");
 mysqli_stmt_bind_param($stmt, "ssssssssssssssssssssss",
-    $job_ref, $first_name, $last_name, $mysql_dob, $gender, $street, $suburb, $state, $postcode, $email, $phone, $skill1, $skill2, $skill3, $skill4, $skill5, $skill6, $skill7, $skill8, $skill9, $skill10, $other_skills);
+    $job_ref, $first_name, $last_name, $mysql_dob, $gender, $address, $suburb, $state, $postcode, $email, $phone, $skill1, $skill2, $skill3, $skill4, $skill5, $skill6, $skill7, $skill8, $skill9, $skill10, $other_skills);
 
 mysqli_stmt_execute($stmt);
 

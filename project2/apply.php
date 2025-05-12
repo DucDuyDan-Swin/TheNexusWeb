@@ -9,14 +9,14 @@
 <?php include 'nav.inc'; ?>
     <main class="form">
         <section>
-            <form action="process_eoi.php" method="post" target="_blank" novalidate="novalidate">
+            <form action="process_eoi.php" method="post" novalidate="novalidate">
                 <h2>Job Application Form</h2>
                 <!-- Job Reference Number -->
                 <label for="job-ref">Job Reference Number:</label>
                 <select id="job-ref" name="job_ref" required>
                     <option value="">Please Select</option>
                     <option value="FSD01">FSD01 - Full Stack Developer</option>
-                    <option value="CSA02">DTA02 - Data Analyst</option>
+                    <option value="DTA02">DTA02 - Data Analyst</option>
                 </select><br><br>
 
                 <!-- First Name -->
@@ -103,7 +103,7 @@
                 <!-- Other Skills -->
                 <label for="other-skills">Other Skills:</label>
                 <br>
-                <textarea id="other-skills" name="other-skills" rows="4" cols="50" placeholder="Write any additional skills that you have on this box...."></textarea><br><br>
+                <textarea id="other-skills" name="other_skills" rows="4" cols="50" placeholder="Write any additional skills that you have on this box...."></textarea><br><br>
                 <br>
 
                 <!--Upload CV PDF File-->
