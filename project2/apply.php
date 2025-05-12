@@ -9,11 +9,11 @@
 <?php include 'nav.inc'; ?>
     <main class="form">
         <section>
-            <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" target="_blank">
+            <form action="process_eoi.php" method="post" target="_blank" novalidate="novalidate">
                 <h2>Job Application Form</h2>
                 <!-- Job Reference Number -->
                 <label for="job-ref">Job Reference Number:</label>
-                <select id="job-ref" name="job-ref" required>
+                <select id="job-ref" name="job_ref" required>
                     <option value="">Please Select</option>
                     <option value="FSD01">FSD01 - Full Stack Developer</option>
                     <option value="CSA02">DTA02 - Data Analyst</option>
@@ -21,11 +21,11 @@
 
                 <!-- First Name -->
                 <label for="first-name">First Name:</label>
-                <input type="text" id="first-name" name="first-name" maxlength="20" pattern="^[A-Za-z]{1,20}$" required><br><br>
+                <input type="text" id="first-name" name="first_name" maxlength="20" pattern="^[A-Za-z]{1,20}$" required><br><br>
 
                 <!-- Last Name -->
                 <label for="last-name">Last Name:</label>
-                <input type="text" id="last-name" name="last-name" maxlength="20" pattern="^[A-Za-z]{1,20}$" required><br><br>
+                <input type="text" id="last-name" name="last_name" maxlength="20" pattern="^[A-Za-z]{1,20}$" required><br><br>
 
                 <!-- Date of Birth -->
                 <label for="dob">Date of Birth:</label>

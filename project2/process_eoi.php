@@ -2,9 +2,12 @@
 session_start();
 include 'settings.php';
 
+mysqli_query($dbconn, "CREATE DATABASE IF NOT EXISTS $sql_db");
+mysqli_select_db($dbconn, $sql_db);
+
 // Only allow POST
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
-    header("Location: jobs.php");
+    header("Location: apply.php");
     exit();
 }
 
@@ -57,7 +60,7 @@ $dob_parts = explode('/', $dob);
 $mysql_dob = $dob_parts[2] . '-' . $dob_parts[1] . '-' . $dob_parts[0];
 
 // Connect to DB
-$conn = mysqli_connect($host, $username, $password, $database);
+$dbconn = mysqli_connect($host, $username, $password, $database);
 
 // Create table if not exists
 $create = "CREATE TABLE IF NOT EXISTS eoi (
@@ -87,25 +90,32 @@ $create = "CREATE TABLE IF NOT EXISTS eoi (
     other_skills TEXT,
     status VARCHAR(10) DEFAULT 'New'
 )";
-mysqli_query($conn, $create);
+mysqli_query($dbconn, $create);
 
 // Prepare skills
 $skill1 = $skills[0] ?? '';
 $skill2 = $skills[1] ?? '';
 $skill3 = $skills[2] ?? '';
+$skill4 = $skills[3] ?? '';
+$skill5 = $skills[4] ?? '';
+$skill6 = $skills[5] ?? '';
+$skill7 = $skills[6] ?? '';
+$skill8 = $skills[7] ?? '';
+$skill9 = $skills[8] ?? '';
+$skill10 = $skills[9] ?? '';
 
 // Insert EOI
-$stmt = mysqli_prepare($conn, "INSERT INTO eoi
-    (job_ref, first_name, last_name, dob, gender, street, suburb, state, postcode, email, phone, skill1, skill2, skill3, other_skills)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt = mysqli_prepare($dbconn, "INSERT INTO eoi
+    (job_ref, first_name, last_name, dob, gender, street, suburb, state, postcode, email, phone, skill1, skill2, skill3, skill4, skill5, skill6, skill7, skill8, skill9, skill10, other_skills)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?)");
 mysqli_stmt_bind_param($stmt, "sssssssssssssss",
     $job_ref, $first_name, $last_name, $mysql_dob, $gender, $street, $suburb, $state, $postcode, $email, $phone, $skill1, $skill2, $skill3, $other_skills);
 mysqli_stmt_execute($stmt);
 
 // Get EOI number
-$eoi_number = mysqli_insert_id($conn);
+$eoi_number = mysqli_insert_id($dbconn);
 
-mysqli_close($conn);
+mysqli_close($dbconn);
 
 // Show confirmation
 $_SESSION['success_message'] = "Your application has been submitted! Your EOI number is: " . $eoi_number;

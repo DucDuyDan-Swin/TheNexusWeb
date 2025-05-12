@@ -1,9 +1,11 @@
 <?php
 // Database connection settings (default XAMPP)
 $host = "localhost";
-$database = "nexus_db";
 $username = "root";
 $password = "";
+$sql_db = "nexus_db";
+
+$dbconn = mysqli_connect($host, $username, $password, $sql_db);
 
 // Error reporting for development (remove or set to 0 for production)
 error_reporting(E_ALL);
