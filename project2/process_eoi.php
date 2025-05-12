@@ -108,8 +108,9 @@ $skill10 = $skills[9] ?? '';
 $stmt = mysqli_prepare($dbconn, "INSERT INTO eoi
     (job_ref, first_name, last_name, dob, gender, street, suburb, state, postcode, email, phone, skill1, skill2, skill3, skill4, skill5, skill6, skill7, skill8, skill9, skill10, other_skills)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?)");
-mysqli_stmt_bind_param($stmt, "sssssssssssssss",
-    $job_ref, $first_name, $last_name, $mysql_dob, $gender, $street, $suburb, $state, $postcode, $email, $phone, $skill1, $skill2, $skill3, $other_skills);
+mysqli_stmt_bind_param($stmt, "ssssssssssssssssssssss",
+    $job_ref, $first_name, $last_name, $mysql_dob, $gender, $street, $suburb, $state, $postcode, $email, $phone, $skill1, $skill2, $skill3, $skill4, $skill5, $skill6, $skill7, $skill8, $skill9, $skill10, $other_skills);
+
 mysqli_stmt_execute($stmt);
 
 // Get EOI number
