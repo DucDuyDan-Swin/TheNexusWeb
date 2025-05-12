@@ -3,12 +3,12 @@ session_start();
 include 'settings.php';
 
 // Test database connection
-$conn = mysqli_connect($host, $username, $password, $database);
-if (!$conn) {
+$dbconn = mysqli_connect($host, $username, $password, $sql_db);
+if (!$dbconn) {
     die("Database connection failed: " . mysqli_connect_error());
 } else {
     // Optional: echo "Database connection successful!";
-    mysqli_close($conn);
+    mysqli_close($dbconn);
 }
 
 // Redirect if already logged in
@@ -24,12 +24,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $input_password = $_POST['password'] ?? '';
 
     // Connect to database
-    $conn = mysqli_connect($host, $username, $password, $database);
+    $dbconn = mysqli_connect($host, $username, $password, $sql_db);
 
-    if ($conn) {
-        $safe_username = mysqli_real_escape_string($conn, $input_username);
+    if ($dbconn) {
+        $safe_username = mysqli_real_escape_string($dbconn, $input_username);
         $query = "SELECT * FROM managers WHERE username='$safe_username'";
-        $result = mysqli_query($conn, $query);
+        $result = mysqli_query($dbconn, $query);
 
         if ($row = mysqli_fetch_assoc($result)) {
             if (password_verify($input_password, $row['password'])) {
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
         $login_error = "Invalid username or password";
-        mysqli_close($conn);
+        mysqli_close($dbconn);
     } else {
         $login_error = "Database connection failed.";
     }

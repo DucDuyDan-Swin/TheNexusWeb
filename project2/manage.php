@@ -7,7 +7,7 @@ if (!isset($_SESSION['manager_logged_in']) || $_SESSION['manager_logged_in'] !==
 }
 
 // Connect to database
-$conn = mysqli_connect($host, $username, $password, $database);
+$dbconn = mysqli_connect($host, $username, $password, $sql_db);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,15 +26,15 @@ $conn = mysqli_connect($host, $username, $password, $database);
             <th>Username</th>
         </tr>
         <?php
-        if ($conn) {
-            $result = mysqli_query($conn, "SELECT * FROM managers");
+        if ($dbconn) {
+            $result = mysqli_query($dbconn, "SELECT * FROM managers");
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>";
                 echo "<td>" . htmlspecialchars($row['id']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['username']) . "</td>";
                 echo "</tr>";
             }
-            mysqli_close($conn);
+            mysqli_close($dbconn);
         } else {
             echo "<tr><td colspan='2'>Database connection failed.</td></tr>";
         }
