@@ -37,10 +37,7 @@ $errors = [];
 if (!$job_ref) $errors[] = "Job reference is required.";
 if (!$first_name || strlen($first_name) > 20 || !ctype_alpha($first_name)) $errors[] = "First name must be 1-20 letters.";
 if (!$last_name || strlen($last_name) > 20 || !ctype_alpha($last_name)) $errors[] = "Last name must be 1-20 letters.";
-if (!preg_match("/^\d{2}\/\d{2}\/\d{4}$/", $dob)) $errors[] = "Date of birth must be dd/mm/yyyy.";
-if (!checkdate($dob_parts[1], $dob_parts[0], $dob_parts[2])) {
-    $errors[] = "Invalid date of birth.";
-}
+if (empty($dob)) {$errors[] = "Date of Birth is required.";}
 if (!$gender) $errors[] = "Gender is required.";
 if (!$address || strlen($address) > 40) $errors[] = "Street address must be 1-40 chars.";
 if (!$suburb || strlen($suburb) > 40) $errors[] = "Suburb must be 1-40 chars.";
@@ -61,9 +58,6 @@ if ($errors) {
     exit();
 }
 
-// Convert DOB to MySQL format
-$dob_parts = explode('/', $dob);
-$mysql_dob = $dob_parts[2] . '-' . $dob_parts[1] . '-' . $dob_parts[0];
 
 // Connect to DB
 $dbconn = mysqli_connect($host, $username, $password, $sql_db);
