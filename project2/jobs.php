@@ -107,7 +107,7 @@
                 </ul>
             </div>
             <div class="apply-now-container">
-                <a href="apply.html" class="apply-now-button"><strong>Apply Now</strong></a>
+                <a href="apply.php" class="apply-now-button"><strong>Apply Now</strong></a>
             </div>
         </section>
     </main>
