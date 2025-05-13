@@ -58,6 +58,9 @@ if ($errors) {
     exit();
 }
 
+if (empty($dob)) {
+    $errors[] = "Date of Birth cannot be empty.";
+}
 
 // Connect to DB
 $dbconn = mysqli_connect($host, $username, $password, $sql_db);
@@ -111,7 +114,7 @@ $stmt = mysqli_prepare($dbconn, "INSERT INTO eoi
     (job_ref, first_name, last_name, dob, gender, address, suburb, state, postcode, email, phone, skill1, skill2, skill3, skill4, skill5, skill6, skill7, skill8, skill9, skill10, other_skills)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?)");
 mysqli_stmt_bind_param($stmt, "ssssssssssssssssssssss",
-    $job_ref, $first_name, $last_name, $mysql_dob, $gender, $address, $suburb, $state, $postcode, $email, $phone, $skill1, $skill2, $skill3, $skill4, $skill5, $skill6, $skill7, $skill8, $skill9, $skill10, $other_skills);
+    $job_ref, $first_name, $last_name, $dob, $gender, $address, $suburb, $state, $postcode, $email, $phone, $skill1, $skill2, $skill3, $skill4, $skill5, $skill6, $skill7, $skill8, $skill9, $skill10, $other_skills);
 
 mysqli_stmt_execute($stmt);
 
