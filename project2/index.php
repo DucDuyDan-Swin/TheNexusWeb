@@ -17,7 +17,7 @@
                 <p>As we look to the future, Nexus remains committed to staying ahead of the curve, embracing emerging technologies, and continuing to set new standards of excellence in the IT industry. Whether you are looking to transform your business, enhance your digital capabilities, or embark on a new career in tech, Nexus is here to help you achieve your goals. Join us on this exciting journey and discover what it means to be part of a company that is shaping the future of technology.</p>
             <div class="join-team">
                 <h2>Join Our Team</h2>
-                <p>Looking for a dynamic career in tech? Explore our <a href="jobs.html">Job Opportunities</a> and be part of our growing team.</p>
+                <p>Looking for a dynamic career in tech? Explore our <a href="jobs.php">Job Opportunities</a> and be part of our growing team.</p>
             </div> 
             <div class="contact-info">
             <h2>Contact Us</h2>
