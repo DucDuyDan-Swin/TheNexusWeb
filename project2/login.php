@@ -49,6 +49,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <title>Nexus Login</title>
 <?php include 'header.inc'; ?>
+<body>
+    <header>
+    <h1>Login</h1>  
+    </header>
+<?php include 'nav.inc'; ?>
 <main>
     <section class="login-form">
         <h1>Login</h1>
@@ -64,8 +69,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit">Login</button>
+            <br>
+            <input type="submit" value="Login" class="submit-button-login">
         </form>
+        <input type="submit" value="Sign Up" class="submit-button-sign-up">
     </section>
 </main>
 <?php include 'footer.inc'; ?>
