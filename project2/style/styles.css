@@ -366,6 +366,13 @@ form select {
     color: white; /* Changes the text color on hover */
 }
 
+
+/* Signup Button Styles */
+.signup-container {
+    text-align: left; /* Centers the button horizontally */
+    margin-top: 25px; /* Adds spacing above and below the button */
+}
+
 .submit-button-sign-up {
     font-family: 'Eightgon', sans-serif; /* Uses the custom font */
     display: inline-block; /* Makes the button behave like an inline block */

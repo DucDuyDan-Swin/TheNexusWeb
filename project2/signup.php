@@ -39,10 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 exit();
             }
         }
-        $login_error = "Invalid username or password";
+        $signup_error = "Invalid username or password";
         mysqli_close($dbconn);
     } else {
-        $login_error = "Database connection failed.";
+        $signup_error = "Database connection failed.";
     }
 }
 ?>
@@ -51,15 +51,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php include 'header.inc'; ?>
 <body>
     <header>
-    <h1>Login</h1>  
+    <h1>Sign Up</h1>  
     </header>
 <?php include 'nav.inc'; ?>
 <main>
-    <section class="login-form">
-        <h1>Login</h1>
-        <?php if ($login_error): ?>
-            <div class="error-message"><?php echo $login_error; ?></div>
-        <?php endif; ?>
+    <section class="Sign-up-form">
+        <h1>Sign Up</h1>
         <form method="POST" action="">
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -67,14 +64,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="text" id="password" name="password" required>
             </div>
             <br>
-            <input type="submit" value="Login" class="submit-button-login">
+            <input type="submit" value="Sign-Up" class="submit-button-sign-up">
         </form>
-        <div class="signup-container">
-            <a href="signup.php" class="submit-button-sign-up"><strong>Sign Up</strong></a>
-        </div>
     </section>
 </main>
 <?php include 'footer.inc'; ?>
