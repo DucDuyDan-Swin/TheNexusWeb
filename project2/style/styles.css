@@ -308,6 +308,12 @@ form select {
     padding-top: 1%; /* Adds padding at the top of the section */
     border: 1px solid #C39131; /* Adds a border around the section */
  }
+
+ form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+}
 /* the submit button size and colour*/
  form input[type="submit"] {
      padding: 10px;

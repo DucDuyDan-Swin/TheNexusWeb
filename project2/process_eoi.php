@@ -29,6 +29,27 @@ $postcode   = clean($_POST['postcode'] ?? '');
 $email      = clean($_POST['email'] ?? '');
 $phone      = preg_replace('/\s+/', '', clean($_POST['phone'] ?? ''));
 $skills     = isset($_POST['skills']) ? $_POST['skills'] : [];
+$cv_filename  = '';
+if (isset($_FILES['cv']) && $_FILES['cv']['error'] === UPLOAD_ERR_OK) {
+    $tmp_name = $_FILES['cv']['tmp_name'];
+    $cv_filename = basename($_FILES['cv']['name']);
+
+    // make folder uploads if it's not there
+    $upload_dir = __DIR__ . '/uploads';
+    if (!is_dir($upload_dir)) {
+        mkdir($upload_dir, 0755, true);
+    }
+    // create the path to save the file
+    $target_file = $upload_dir . '/' . $cv_filename;
+    // move the file from tmp to uploads folder
+    if (!move_uploaded_file($tmp_name, $target_file)) {
+        echo "File uploaded to: $target_file"; 
+    } else {
+        echo "Failed to move uploaded file.";
+        // if failed to upload empty the file name
+        $cv_filename = '';
+    }
+}
 $other_skills = clean($_POST['other_skills'] ?? '');
 
 $errors = [];
@@ -58,13 +79,6 @@ if ($errors) {
     exit();
 }
 
-if (empty($dob)) {
-    $errors[] = "Date of Birth cannot be empty.";
-}
-
-// Connect to DB
-$dbconn = mysqli_connect($host, $username, $password, $sql_db);
-
 // Create table if not exists
 $create = "CREATE TABLE IF NOT EXISTS eoi (
     EOInumber INT AUTO_INCREMENT PRIMARY KEY,
@@ -89,7 +103,7 @@ $create = "CREATE TABLE IF NOT EXISTS eoi (
     skill8 VARCHAR(50),
     skill9 VARCHAR(50),
     skill10 VARCHAR(50),
-
+    cv_filename VARCHAR(225),
     other_skills TEXT,
     status VARCHAR(10) DEFAULT 'New'
 )";
@@ -111,10 +125,10 @@ $skill10 = $skills[9] ?? '';
 $status = "New";
 
 $stmt = mysqli_prepare($dbconn, "INSERT INTO eoi
-    (job_ref, first_name, last_name, dob, gender, address, suburb, state, postcode, email, phone, skill1, skill2, skill3, skill4, skill5, skill6, skill7, skill8, skill9, skill10, other_skills)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?)");
-mysqli_stmt_bind_param($stmt, "ssssssssssssssssssssss",
-    $job_ref, $first_name, $last_name, $dob, $gender, $address, $suburb, $state, $postcode, $email, $phone, $skill1, $skill2, $skill3, $skill4, $skill5, $skill6, $skill7, $skill8, $skill9, $skill10, $other_skills);
+    (job_ref, first_name, last_name, dob, gender, address, suburb, state, postcode, email, phone, skill1, skill2, skill3, skill4, skill5, skill6, skill7, skill8, skill9, skill10, cv_filename, other_skills)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+mysqli_stmt_bind_param($stmt, "sssssssssssssssssssssss",
+    $job_ref, $first_name, $last_name, $dob, $gender, $address, $suburb, $state, $postcode, $email, $phone, $skill1, $skill2, $skill3, $skill4, $skill5, $skill6, $skill7, $skill8, $skill9, $skill10, $cv_filename, $other_skills);
 
 mysqli_stmt_execute($stmt);
 
@@ -126,6 +140,7 @@ mysqli_close($dbconn);
 // Show confirmation
 $_SESSION['success_message'] = "Your application has been submitted! Your EOI number is: " . $eoi_number;
 $_SESSION['form_data'] = $_POST;  //
+$_SESSION['form_data']['cv_filename'] = $cv_filename;
 header("Location: confirmation.php");
 exit();
 ?>

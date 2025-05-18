@@ -8,6 +8,8 @@ if (!isset($_SESSION['success_message']) || !isset($_SESSION['form_data'])) {
 
 $success_message = $_SESSION['success_message'] ?? 'No confirmation message.';
 $form_data = $_SESSION['form_data'] ?? [];
+$cv_filename = $form_data['cv_filename'] ?? 'None';
+
 
 unset($_SESSION['success_message']);
 unset($_SESSION['form_data']);
@@ -48,6 +50,9 @@ function showSkills() {
         <li><strong>Postcode:</strong> <?php echo htmlspecialchars($form_data['postcode']); ?></li>
         <li><strong>Email:</strong> <?php echo htmlspecialchars($form_data['email']); ?></li>
         <li><strong>Phone:</strong> <?php echo htmlspecialchars($form_data['phone']); ?></li>
+        <?php if (!empty($form_data['cv_filename'])): ?>
+        <li><strong>Uploaded CV File:</strong><?php echo htmlspecialchars($cv_filename) ?></li>
+        <?php endif; ?>
         <li><strong>Skills:</strong>
             <ul>
                 <?php 
