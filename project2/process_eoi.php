@@ -30,26 +30,27 @@ $email      = clean($_POST['email'] ?? '');
 $phone      = preg_replace('/\s+/', '', clean($_POST['phone'] ?? ''));
 $skills     = isset($_POST['skills']) ? $_POST['skills'] : [];
 $cv_filename  = '';
+
 if (isset($_FILES['cv']) && $_FILES['cv']['error'] === UPLOAD_ERR_OK) {
     $tmp_name = $_FILES['cv']['tmp_name'];
-    $cv_filename = basename($_FILES['cv']['name']);
+    $original_name = basename($_FILES['cv']['name']);
+    $file_ext = strtolower(pathinfo($original_name, PATHINFO_EXTENSION));
+    // Generate a safe, unique file name: e.g. cv_20240519_123456.pdf
+    $cv_filename = 'cv_' . date('Ymd_His') . '_' . uniqid() . '.' . $file_ext;
 
-    // make folder uploads if it's not there
     $upload_dir = __DIR__ . '/uploads';
     if (!is_dir($upload_dir)) {
         mkdir($upload_dir, 0755, true);
     }
-    // create the path to save the file
     $target_file = $upload_dir . '/' . $cv_filename;
-    // move the file from tmp to uploads folder
-    if (!move_uploaded_file($tmp_name, $target_file)) {
-        echo "File uploaded to: $target_file"; 
+    if (move_uploaded_file($tmp_name, $target_file)) {
+        // File uploaded successfully
     } else {
-        echo "Failed to move uploaded file.";
-        // if failed to upload empty the file name
+        // Failed to move file
         $cv_filename = '';
     }
 }
+
 $other_skills = clean($_POST['other_skills'] ?? '');
 
 $errors = [];

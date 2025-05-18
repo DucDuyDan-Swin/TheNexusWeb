@@ -11,7 +11,7 @@
 <?php include 'nav.inc'; ?>
     <main class="form">
         <section>
-            <form action="process_eoi.php" method="post" novalidate="novalidate">
+            <form action="process_eoi.php" method="post" novalidate="novalidate" enctype="multipart/form-data">
                 <h2>Job Application Form</h2>
                 <!-- Job Reference Number -->
                 <label for="job-ref">Job Reference Number:</label>

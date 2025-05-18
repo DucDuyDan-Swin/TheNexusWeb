@@ -50,9 +50,6 @@ function showSkills() {
         <li><strong>Postcode:</strong> <?php echo htmlspecialchars($form_data['postcode']); ?></li>
         <li><strong>Email:</strong> <?php echo htmlspecialchars($form_data['email']); ?></li>
         <li><strong>Phone:</strong> <?php echo htmlspecialchars($form_data['phone']); ?></li>
-        <?php if (!empty($form_data['cv_filename'])): ?>
-        <li><strong>Uploaded CV File:</strong><?php echo htmlspecialchars($cv_filename) ?></li>
-        <?php endif; ?>
         <li><strong>Skills:</strong>
             <ul>
                 <?php 
@@ -69,6 +66,27 @@ function showSkills() {
         <?php if (!empty($form_data['other_skills'])): ?>
             <li><strong>Other Skills:</strong> <?php echo htmlspecialchars($form_data['other_skills']); ?></li>
         <?php endif; ?>
+        <?php if (!empty($form_data['cv_filename'])): ?>
+    <?php
+    $file_url = "uploads/" . urlencode($cv_filename);
+    $file_path = __DIR__ . "/uploads/" . $cv_filename;
+    $file_ext = strtolower(pathinfo($cv_filename, PATHINFO_EXTENSION));
+    ?>
+    <li>
+        <strong>Uploaded CV File:</strong>
+        <?php if (file_exists($file_path)): ?>
+            <?php
+            if ($file_ext === 'pdf') {
+                echo '<br><embed src="' . $file_url . '" type="application/pdf" width="600" height="850">';
+            } elseif (in_array($file_ext, ['jpg', 'jpeg', 'png', 'gif'])) {
+                echo '<br><img src="' . $file_url . '" alt="Uploaded CV" style="max-width:600px;max-height:850px;">';
+            }
+            ?>
+        <?php else: ?>
+            <br><span style="color:red;">File not found in uploads folder.</span>
+        <?php endif; ?>
+    </li>
+<?php endif; ?>
     </ul>
 </body>
 </html>

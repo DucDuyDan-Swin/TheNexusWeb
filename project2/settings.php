@@ -3,7 +3,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$sql_db = "nexus_db";
+$sql_db = "nexusweb_db";
 
 $dbconn = mysqli_connect($host, $username, $password, $sql_db);
 

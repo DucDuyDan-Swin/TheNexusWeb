@@ -56,6 +56,7 @@ nav a{
 
 .nav-link :hover {
     background-color: #016a8a; /* Changes the background color on hover */
+    color: #C39131; /* Changes the text color on hover */
 }
 
 /* Navigation Toggle for Mobile */
@@ -63,37 +64,20 @@ nav a{
     display: none; /* Hides the sidebar toggle button */
     justify-content: flex-start; /* Aligns items to the start of the sidebar */
 }
-.sidebar {
-    display: none;
-}
 
-@media (max-width: 768px) {
-    nav ul {
-        display: none; /* Hides the navigation bar on smaller screens */
-    }
-    .sidebar{
+#close {
         position: sticky; /* Positions the sidebar relative to its normal flow */
-        top: 10%; /* Positions the sidebar at the top of the viewport */
+        top: 0; /* Positions the sidebar at the top of the viewport */
         height: auto; /* Sets the height to 100% of the viewport */
-        width: 100vw; /* Sets the width of the sidebar */
+        width: 13%; /* Sets the width of the sidebar */
         z-index: 69; /* Ensures the sidebar is above other elements */
         background-color: #01496669; /* Sets the background color of the sidebar */
         backdrop-filter: blur(5px); /* Adds a blur effect to the background */
-        display: none; /* Makes the sidebar a flex container */
+        display: none; /* Hides the sidebar by default */
         flex-direction: column; /* Aligns items in a column */
         align-items: center; /* Aligns items to the start of the sidebar */
         justify-items: center; /* Aligns items to the start of the sidebar */
     }
-    nav ol {
-        background-color: #014a66; /* Sets the background color of the sidebar */
-        list-style: none; /* Removes underline from links */
-        display: flex; /* Displays the sidebar toggle button */
-        justify-content: center; /* Centers the button */
-        align-items: center; /* Vertically centers the button */
-        margin: 0; /* Removes default margin */
-        padding: 0; /* Removes default padding */
-    }
-}
     
 /* Body Styles */
 body {
@@ -298,19 +282,17 @@ form select {
  }
 
  .file {
-    font-size: 16px;
-    width: 30%;
- }
-
- .file {
+    font-size: 1.6rem; /* Sets the font size of the file input */
+    max-width: 360px;
     margin: 0; /* Centers the section on the page */
-    padding: 5%; /* Adds padding inside the section */
+    padding-bottom: 2%; /* Adds padding inside the section */
     padding-top: 1%; /* Adds padding at the top of the section */
     border: 1px solid #C39131; /* Adds a border around the section */
+    border-radius: 5px; /* Rounds the corners of the section */
  }
 
- form textarea {
-    width: 100%;
+ form textarea{
+    max-width: 100%;
     box-sizing: border-box;
     resize: vertical;
 }
@@ -502,4 +484,16 @@ figure {
     max-width: 600px;
     padding: 10px;
     box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    #nav-link {
+        display: none; /* Hides the navigation bar on smaller screens */
+    }
+    #close{
+        display: flex; /* Makes the sidebar a flex container */
+    }
+     .file {
+    border: 0px solid #C39131; /* Removes the border */
+    }
 }

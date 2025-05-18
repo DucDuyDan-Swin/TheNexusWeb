@@ -1,9 +1,13 @@
-<title>Project Enhancements</title>
 <?php include 'header.inc'; ?>
+<title>Enhancements</title>
+</head>
+<body>
+    <header>
+        <h1>Project Enhancements</h1>
+        <p>Features added to project</p>
+    </header>
 <?php include 'nav.inc'; ?>
     <main>
-        <h1>Project Enhancements</h1>
-
         <section class="enhancement">
             <h2>1. Advanced Search Functionality</h2>
             <p><strong>Description:</strong> Implemented advanced search features in manage.php</p>
@@ -39,7 +43,7 @@
                 <li>Automatic job expiry handling</li>
                 <li>Job category filtering</li>
             </ul>
-            <p><strong>Location:</strong> jobs.php, admin/jobs_manage.php</p>
+            <p><strong>Location:</strong> jobs.php</p>
             <p><strong>Technical Details:</strong> Uses AJAX for real-time updates, MySQL events for job expiry, and JavaScript for dynamic filtering.</p>
         </section>
 
@@ -52,7 +56,7 @@
                 <li>Custom validation rules</li>
                 <li>Error highlighting and feedback</li>
             </ul>
-            <p><strong>Location:</strong> apply.php, js/validation.js</p>
+            <p><strong>Location:</strong> apply.php</p>
             <p><strong>Technical Details:</strong> Combines JavaScript for instant feedback with PHP server-side validation for security.</p>
         </section>
     </main>
