@@ -1,54 +1,40 @@
 <?php
 session_start();
-include 'settings.php';
+include("settings.php");
 
-// Test database connection
 $dbconn = mysqli_connect($host, $username, $password, $sql_db);
-if (!$dbconn) {
-    die("Database connection failed: " . mysqli_connect_error());
-} else {
-    // Optional: echo "Database connection successful!";
-    mysqli_close($dbconn);
-}
 
-// Redirect if already logged in
-if (isset($_SESSION['manager_logged_in']) && $_SESSION['manager_logged_in'] === true) {
-    header('Location: index.php');
-    exit();
-}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get form data safely
+    $username = isset($_POST['username']) ? trim($_POST['username']) : '';
+    $password = isset($_POST['password']) ? trim($_POST['password']) : '';
 
-$login_error = '';
+    // Hash the password securely
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $input_username = trim($_POST['username'] ?? '');
-    $input_password = $_POST['password'] ?? '';
+    // Escape special characters to prevent basic SQL injection
+    $username = mysqli_real_escape_string($dbconn, $username);
+    $hashedPassword = mysqli_real_escape_string($dbconn, $hashedPassword);
 
-    // Connect to database
-    $dbconn = mysqli_connect($host, $username, $password, $sql_db);
+    // Insert user into the database
+    $query = "INSERT INTO users (username, password) VALUES ('$username', '$hashedPassword')";
+    $result = mysqli_query($dbconn, $query);
 
-    if ($dbconn) {
-        $safe_username = mysqli_real_escape_string($dbconn, $input_username);
-        $query = "SELECT * FROM managers WHERE username='$safe_username'";
-        $result = mysqli_query($dbconn, $query);
-
-        if ($row = mysqli_fetch_assoc($result)) {
-            if (password_verify($input_password, $row['password'])) {
-                $_SESSION['manager_logged_in'] = true;
-                $_SESSION['manager_id'] = $row['id'];
-                header('Location: index.php'); // Redirect to index.php after login
-                exit();
-            }
-        }
-        $signup_error = "Invalid username or password";
-        mysqli_close($dbconn);
+    if ($result) {
+        echo "Signup successful. You can now <a href='login.php'>login</a>.";
     } else {
-        $signup_error = "Database connection failed.";
+        echo "Signup failed. Please try again.";
     }
 }
 ?>
 
-<title>Nexus Login</title>
-<?php include 'header.inc'; ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Signup page</title>
+    <?php include 'header.inc'; ?>
+</head>
 <body>
     <header>
     <h1>Sign Up</h1>  
@@ -60,11 +46,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form method="POST" action="">
             <div class="form-group">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" placeholder="Enter Username" required>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="text" id="password" name="password" required>
+                <input type="text" id="password" name="password" placeholder="Enter Password" required>
             </div>
             <br>
             <input type="submit" value="Sign-Up" class="submit-button-sign-up">

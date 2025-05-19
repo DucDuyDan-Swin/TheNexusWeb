@@ -1,54 +1,44 @@
 <?php
 session_start();
-include 'settings.php';
+include("settings.php");
 
-// Test database connection
 $dbconn = mysqli_connect($host, $username, $password, $sql_db);
-if (!$dbconn) {
-    die("Database connection failed: " . mysqli_connect_error());
-} else {
-    // Optional: echo "Database connection successful!";
-    mysqli_close($dbconn);
-}
 
-// Redirect if already logged in
-if (isset($_SESSION['manager_logged_in']) && $_SESSION['manager_logged_in'] === true) {
-    header('Location: index.php');
-    exit();
-}
+$login_error = ""; // Initialize error variable
 
-$login_error = '';
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get user input safely
+    $username = isset($_POST['username']) ? trim($_POST['username']) : '';
+    $password = isset($_POST['password']) ? trim($_POST['password']) : '';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $input_username = trim($_POST['username'] ?? '');
-    $input_password = $_POST['password'] ?? '';
+    // Escape to prevent SQL injection
+    $username = mysqli_real_escape_string($dbconn, $username);
 
-    // Connect to database
-    $dbconn = mysqli_connect($host, $username, $password, $sql_db);
+    // Fetch user by username
+    $query = "SELECT * FROM users WHERE username = '$username'";
+    $result = mysqli_query($dbconn, $query);
+    $user = mysqli_fetch_assoc($result);
 
-    if ($dbconn) {
-        $safe_username = mysqli_real_escape_string($dbconn, $input_username);
-        $query = "SELECT * FROM managers WHERE username='$safe_username'";
-        $result = mysqli_query($dbconn, $query);
-
-        if ($row = mysqli_fetch_assoc($result)) {
-            if (password_verify($input_password, $row['password'])) {
-                $_SESSION['manager_logged_in'] = true;
-                $_SESSION['manager_id'] = $row['id'];
-                header('Location: index.php'); // Redirect to index.php after login
-                exit();
-            }
-        }
-        $login_error = "Invalid username or password";
-        mysqli_close($dbconn);
+    if ($user && password_verify($password, $user['password'])) {
+        // Password is correct
+        $_SESSION['username'] = $user['username'];
+        header("Location: index.php"); // Redirect to a welcome/protected page
+        exit();
     } else {
-        $login_error = "Database connection failed.";
+        $login_error = "Incorrect username or password.";
     }
 }
 ?>
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <title>Nexus Login</title>
 <?php include 'header.inc'; ?>
+</head>
 <body>
     <header>
     <h1>Login</h1>  
@@ -57,9 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <main>
     <section class="login-form">
         <h1>Login</h1>
-        <?php if ($login_error): ?>
-            <div class="error-message"><?php echo $login_error; ?></div>
-        <?php endif; ?>
+        <?php if (!empty($login_error)) echo "<p style='color:red;'>$login_error</p>"; ?>
         <form method="POST" action="">
             <div class="form-group">
                 <label for="username">Username:</label>
