@@ -10,7 +10,21 @@
     </header>
 <?php include 'nav.inc'; ?>
     <main class="form">
+        
         <section>
+           <?php
+            if (isset($_SESSION['form_errors']) && !empty($_SESSION['form_errors'])) {
+                echo "<div class='errors'>";
+                echo "<h2>There were some problems with your submission:</h2>";
+                echo "<ul>";
+                foreach ($_SESSION['form_errors'] as $error) {
+                    echo "<li>" . htmlspecialchars($error) . "</li>";
+                }
+                echo "</ul>";
+                echo "</div>";
+                unset($_SESSION['form_errors']);
+            }
+            ?>
             <form action="process_eoi.php" method="post" novalidate="novalidate" enctype="multipart/form-data">
                 <h2>Job Application Form</h2>
                 <!-- Job Reference Number -->
