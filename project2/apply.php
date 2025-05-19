@@ -15,7 +15,7 @@
            <?php
             if (isset($_SESSION['form_errors']) && !empty($_SESSION['form_errors'])) {
                 echo "<div class='errors'>";
-                echo "<h3>There were some problems with your submission:</h3>";
+                echo "<h2>There were some problems with your submission:</h2>";
                 echo "<ul>";
                 foreach ($_SESSION['form_errors'] as $error) {
                     echo "<li>" . htmlspecialchars($error) . "</li>";
