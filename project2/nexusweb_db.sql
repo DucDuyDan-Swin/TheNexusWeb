@@ -75,10 +75,8 @@ CREATE TABLE `managers` (
 --
 
 INSERT INTO `managers` (`id`, `username`, `password`, `login_attempts`, `last_attempt`, `role`) VALUES
-(1, 'admin', '$2y$10$s6IWV1tGmRvnVCphFqkR/eIfF3nT74STws6IXHr4vPLX84QQGawIW', 0, '2025-05-22 02:06:05', 'admin'),
-(7, 'Duy', '$2y$10$/WdBZTW3ofQ3WFUZJSZuF.M7/C7Uvl2bK4aSt3HF4bF1/gpqJ9hvK', 0, '2025-05-22 02:06:14', 'admin'),
-(8, 'Dan', '$2y$10$6YM3KVgG8EhfXikorgZcJePnQXJJ.sJWuqwW.W3ROwwtt74HBB2nm', 0, '2025-05-22 02:07:20', 'user'),
-(9, 'Duc', '$2y$10$IUA6I4Mb5.sKSfRDjGuWWOrk2b8VBq5altynCv1w3/uflZaY5kjpm', 0, '2025-05-22 02:11:24', 'user');
+(1, 'Duy', '$2y$10$/WdBZTW3ofQ3WFUZJSZuF.M7/C7Uvl2bK4aSt3HF4bF1/gpqJ9hvK', 0, '2025-05-22 02:06:14', 'admin'),
+(2, 'Dan', '$2y$10$6YM3KVgG8EhfXikorgZcJePnQXJJ.sJWuqwW.W3ROwwtt74HBB2nm', 0, '2025-05-22 02:07:20', 'user'),
 
 --
 -- Indexes for dumped tables
