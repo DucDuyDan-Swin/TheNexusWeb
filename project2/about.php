@@ -39,14 +39,14 @@
             <ol>
                 <li>Duc Duy Dan (Team Leader)
                     <ul>
-                        <li>Shared Responsibility: index.html, styles.css (header, logo, footer), recheck the program</li>
-                        <li>Individual Responsibility: jobs.html, group agreement form, responsible for product submission</li>
+                        <li>Shared Responsibility: index.php, login.php, signup.php, process_eoi.php, setting.php styles.css, header.inc, nav.inc, footer.inc, recheck the program, update database</li>
+                        <li>Individual Responsibility: jobs.php, manage.php, group agreement form, responsible for product submission</li>
                     </ul>
                 </li>   
                 <li>Sebastian Wang
                     <ul>
-                        <li>Shared Responsibility: index.html, styles.css (for apply.html)</li>
-                        <li>Individual Responsibility: apply.html, Jira Project link, about.html</li>
+                        <li>Shared Responsibility: index.html, styles.css (for apply.html), confirmation.php,</li>
+                        <li>Individual Responsibility: process_eoi.php, added an error message when uploading a form on apply.php and create a eoi table</li>
                     </ul>
                 </li>
                 <li>Ethan Putra
@@ -57,8 +57,8 @@
                 </li>    
                 <li>Tessy Kurian
                     <ul>
-                        <li>Shared Responsibility: index.html, about.html, styles.css</li>
-                        <li>Individual Responsibility: index.html</li>
+                        <li>Shared Responsibility: index.html, about.php, job.php</li>
+                        <li>Individual Responsibility: index.html, jobs.php</li>
                     </ul>
                 </li>
             </ol>
