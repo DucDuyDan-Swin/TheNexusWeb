@@ -1,4 +1,6 @@
 <?php
+session_unset();
+session_destroy();
 session_start();
 include("settings.php");
 
@@ -16,15 +18,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = mysqli_real_escape_string($dbconn, $username);
 
     // Fetch user by username
-    $query = "SELECT * FROM users WHERE username = '$username'";
+    $query = "SELECT * FROM managers WHERE username = '$username'";
     $result = mysqli_query($dbconn, $query);
     $user = mysqli_fetch_assoc($result);
 
     if ($user && password_verify($password, $user['password'])) {
-        // Password is correct
-        $_SESSION['username'] = $user['username'];
-        header("Location: index.php"); // Redirect to a welcome/protected page
-        exit();
+    // Password is correct
+    $_SESSION['username'] = $user['username'];
+    $_SESSION['role'] = $user['role'];
+    if ($user['role'] === 'admin') {
+        $_SESSION['manager_logged_in'] = true;
+        header("Location: manage.php"); // Redirect to admin page
+    } else {
+        header("Location: index.php"); // Redirect to user page
+    }
+    exit();
     } else {
         $login_error = "Incorrect username or password.";
     }

@@ -88,5 +88,8 @@ function showSkills() {
     </li>
 <?php endif; ?>
     </ul>
+    <form action="index.php" method="get" style="margin-top:20px;">
+        <button type="submit">Back to Home</button>
+    </form>
 </body>
 </html>

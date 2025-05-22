@@ -81,7 +81,7 @@
                 </thead>
                 <tbody>
                     <tr id="Danny">
-                        <td>Duc Duy Dan</td>
+                          <td><a href="manage.php" style="text-decoration:none; color:inherit;">Duc Duy Dan</a></td>
                         <td>Gaming, eating, cycling and sleep</td>
                     </tr>
                     <tr id="Sebastian">

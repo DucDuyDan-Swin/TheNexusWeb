@@ -17,18 +17,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashedPassword = mysqli_real_escape_string($dbconn, $hashedPassword);
 
     // Insert user into the database
-    $query = "INSERT INTO users (username, password) VALUES ('$username', '$hashedPassword')";
+    $query = "INSERT INTO managers (username, password, role) VALUES ('$username', '$hashedPassword', 'user')";
     $result = mysqli_query($dbconn, $query);
 
     if ($result) {
-        echo "Signup successful. You can now <a href='login.php'>login</a>.";
+        $signup_message = "Signup successful. You can now <a href='login.php'>login</a>.";
     } else {
-        echo "Signup failed. Please try again.";
+        $signup_message = "Signup failed. Please try again.";
     }
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <br>
             <input type="submit" value="Sign-Up" class="submit-button-sign-up">
         </form>
+        <?php if (!empty($signup_message)) echo "<p style='color:green;'>$signup_message</p>"; ?>
     </section>
 </main>
 <?php include 'footer.inc'; ?>
