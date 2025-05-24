@@ -214,6 +214,8 @@ form label {
 }
 /* the fieldset colour and size*/
 form fieldset {
+    display: inline-block;
+    align-items: center; /* Centers the content inside the fieldset */
     margin-bottom: 15px;
     border: 1px solid #C39131;
     border-radius: 5px;
@@ -227,12 +229,23 @@ form legend {
 /* the form input style, size, and colour*/
 form input[type="text"],
 form input[type="date"],
-form input[type="email"],
 form textarea,
 form input[type="file"]
 form select {
     padding: 10px;
     margin-bottom: 15px;
+    max-width: 100px;
+    border-radius: 5px;
+    border: 1px solid #C39131;
+    background-color: #f3f6f68e;
+    font-size: 16px;
+    color: #333;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+form input[type="email"]{
+    padding: 10px;
+    margin-bottom: 15px;
+    max-width: 300px;
     border-radius: 5px;
     border: 1px solid #C39131;
     background-color: #f3f6f68e;
@@ -491,11 +504,19 @@ hr {
     margin: 20px 0; /* Adds spacing above and below the line */
 }
 
-.maps {
-    width: 350px; /* Sets the width of the iframe */
-    height: 250px; /* Sets the height of the iframe */
-    border: 0; /* Removes the border */
+.map-container {
+    margin: 20px 0;
+    text-align: center;
 }
+
+.google-map {
+    width: 100%;
+    max-width: 80%;
+    height: 450px;
+    border: 2px solid #C39131;
+    border-radius: 5px;
+}
+
 figure {
     display: block;
     margin: 0 auto;
@@ -523,5 +544,11 @@ figure {
     }
      .file {
     border: 0px solid #C39131; /* Removes the border */
+    }
+    .google-map {
+        height: 300px;
+    }
+    aside.job-tips {
+        display: none; /* Hides the application tips on small screens */
     }
 }

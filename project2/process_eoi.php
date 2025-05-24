@@ -22,7 +22,7 @@ $first_name = clean($_POST['first_name'] ?? '');
 $last_name  = clean($_POST['last_name'] ?? '');
 $dob        = clean($_POST['dob'] ?? '');
 $gender     = clean($_POST['gender'] ?? '');
-$address     = clean($_POST['address'] ?? '');
+$address    = clean($_POST['address'] ?? '');
 $suburb     = clean($_POST['suburb'] ?? '');
 $state      = clean($_POST['state'] ?? '');
 $postcode   = clean($_POST['postcode'] ?? '');
@@ -55,6 +55,11 @@ $other_skills = clean($_POST['other_skills'] ?? '');
 
 $errors = [];
 
+// Check if "Other" is checked but "Other Skills" is empty
+if (in_array('OtherS', $skills) && $other_skills === '') {
+    $errors[] = "If you select 'Other' as a skill, you must fill out the Other Skills box.";
+}
+
 // Basic validation
 if (!$job_ref) $errors[] = "Job reference is required.";
 if (!$first_name || strlen($first_name) > 20 || !ctype_alpha($first_name)) $errors[] = "First name must be 1-20 letters.";
@@ -73,10 +78,12 @@ if (in_array("Other", $skills) && empty($other_skills)) {
 }
 
 // If errors, redirect back with errors
-if ($errors) {
-    $_SESSION['form_errors'] = $errors;
-    $_SESSION['form_data'] = $_POST;
-    header("Location: apply.php");
+if (!empty($errors)) {
+    echo "<h2>There were errors in your submission:</h2><ul>";
+    foreach ($errors as $error) {
+        echo "<li>" . htmlspecialchars($error) . "</li>";
+    }
+    echo "</ul><a href='javascript:history.back()'>Go Back</a>";
     exit();
 }
 

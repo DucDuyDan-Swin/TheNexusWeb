@@ -20,9 +20,18 @@
                 <p>Looking for a dynamic career in tech? Explore our <a href="jobs.php">Job Opportunities</a> and be part of our growing team.</p>
             </div> 
             <div class="contact-info">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or would like to learn more about Nexus, please feel free to reach out to us. We are here to help!</p>
-    </section>
+                <h2>Contact Us</h2>
+                <p>If you have any questions or would like to learn more about Nexus, please feel free to reach out to us. We are here to help!</p>
+                <address>
+                <p><strong>Email:</strong> <a href="mailto:info@nexus.example">info@nexus.example</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                <p><strong>Address:</strong> 123 Tech Street, Innovation City</p>
+                </address>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.158215399012!2d-122.08390972426697!3d37.42199997982545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080c2c5ff49%3A0xf0a80ae7a6c5f2e5!2sGoogleplex!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" class="google-map">
+        </iframe>
+    </div>
+        </section>
     </main>
 <?php include 'footer.inc'; ?>
 </body>

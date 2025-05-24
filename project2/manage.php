@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'settings.php';
+
 // Only allow access if logged in and role is admin
 if (
     !isset($_SESSION['manager_logged_in']) ||
@@ -12,7 +13,6 @@ if (
     exit();
 }
 
-// Connect to database
 // Handle delete by job reference
 if (isset($_POST['delete_job_ref']) && !empty($_POST['delete_job_ref'])) {
     $job_ref = mysqli_real_escape_string($dbconn, $_POST['delete_job_ref']);
@@ -42,8 +42,13 @@ if (!empty($_GET['last_name'])) {
     $last_name = mysqli_real_escape_string($dbconn, $_GET['last_name']);
     $where[] = "last_name LIKE '%$last_name%'";
 }
+
+// Sorting enhancement
+$sort_fields = ['EOInumber', 'job_ref', 'first_name', 'last_name', 'status'];
+$sort = isset($_GET['sort']) && in_array($_GET['sort'], $sort_fields) ? $_GET['sort'] : 'EOInumber';
+
 $where_sql = $where ? "WHERE " . implode(" AND ", $where) : "";
-$result = mysqli_query($dbconn, "SELECT * FROM eoi $where_sql ORDER BY EOInumber DESC");
+$result = mysqli_query($dbconn, "SELECT * FROM eoi $where_sql ORDER BY $sort DESC");
 ?>
 <?php include 'header.inc'; ?>
 <title>Manage EOIs</title>
@@ -57,11 +62,21 @@ $result = mysqli_query($dbconn, "SELECT * FROM eoi $where_sql ORDER BY EOInumber
     <?php if (!empty($message)) echo "<p style='color:green;'>$message</p>"; ?>
 <section>
     <form method="get" style="margin-bottom:1em;">
-        <label>Job Reference: <input type="text" name="job_ref" value="<?php echo htmlspecialchars($_GET['job_ref'] ?? ''); ?>"></label>
-        <label>First Name: <input type="text" name="first_name" value="<?php echo htmlspecialchars($_GET['first_name'] ?? ''); ?>"></label>
-        <label>Last Name: <input type="text" name="last_name" value="<?php echo htmlspecialchars($_GET['last_name'] ?? ''); ?>"></label>
-        <button type="submit">Search</button>
-        <a href="manage.php">Reset</a>
+    <label>Job Reference: <input type="text" name="job_ref" value="<?php echo htmlspecialchars($_GET['job_ref'] ?? ''); ?>"></label>
+    <label>First Name: <input type="text" name="first_name" value="<?php echo htmlspecialchars($_GET['first_name'] ?? ''); ?>"></label>
+    <label>Last Name: <input type="text" name="last_name" value="<?php echo htmlspecialchars($_GET['last_name'] ?? ''); ?>"></label>
+    <label>Sort by:
+        <select name="sort">
+            <?php
+            foreach ($sort_fields as $field) {
+                $selected = (isset($_GET['sort']) && $_GET['sort'] == $field) ? 'selected' : '';
+                echo "<option value=\"$field\" $selected>$field</option>";
+            }
+            ?>
+        </select>
+    </label>
+    <button type="submit">Search</button>
+    <a href="manage.php">Reset</a>
     </form>
 
     <form method="post" style="margin-bottom:1em;">
@@ -69,7 +84,7 @@ $result = mysqli_query($dbconn, "SELECT * FROM eoi $where_sql ORDER BY EOInumber
         <button type="submit" onclick="return confirm('Are you sure you want to delete all EOIs for this job reference?');">Delete</button>
     </form>
 
-    <table border="1" cellpadding="4" cellspacing="0">
+    <table>
     <tr>
         <th>EOI #</th>
         <th>Job Ref</th>

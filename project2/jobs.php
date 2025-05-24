@@ -33,10 +33,16 @@ include 'settings.php';
                 echo "<h3>Required Qualifications:</h3>" . $job['required_qualifications'];
                 echo "<h4>Essential:</h4>" . $job['essential'];
                 echo "<h4>Preferable:</h4>" . $job['preferable'];
-                echo "<div class='why-join'><h2>Why Join Nexus?</h2>" . $job['why_join'] . "</div>";
                 echo "<hr></div>";
             }
             ?>
+            <div class='why-join'><h2>Why Join Nexus?</h2>
+                <ul>
+                    <li>Innovative and collaborative work environment.</li>
+                    <li>Opportunities for professional growth and development.</li>
+                    <li>Competitive salaries and comprehensive benefits.</li>
+                </ul>
+            </div>
             <div class="apply-now-container">
                 <a href="apply.php" class="apply-now-button"><strong>Apply Now</strong></a>
             </div>
