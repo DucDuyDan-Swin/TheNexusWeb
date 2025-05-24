@@ -207,7 +207,7 @@ form form {
     flex-direction: column;
 }
 /* Form label font weight, margin, and colour*/
-form label {
+.job-application-form {
     font-weight: bold;
     margin-bottom: 5px;
     color: #2c3e50;
@@ -228,13 +228,14 @@ form legend {
 } 
 /* the form input style, size, and colour*/
 form input[type="text"],
+form input[type="password"],
 form input[type="date"],
 form textarea,
 form input[type="file"]
 form select {
     padding: 10px;
     margin-bottom: 15px;
-    max-width: 100px;
+    max-width: 150px;
     border-radius: 5px;
     border: 1px solid #C39131;
     background-color: #f3f6f68e;
@@ -396,31 +397,66 @@ form input[type="email"]{
 }
 
 
-/* Signup Button Styles */
+/* Login and Sign-up Form Styles */
+.form-login-signup{
+    color: #C39131; /* Sets the text color for the login and signup forms */
+}
+.login-form, .Sign-up-form, .signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: fit-content;
+    padding: 2em 1em;
+    border-color: #f4f4f400;
+    background-color: #f4f4f400; /* Light background color for the forms */;
+    color: #C39131; /* Sets the text color for the forms */
+}
+
+.login-form h1, .Sign-up-form h1 {
+    text-align: center;
+}
+
 .signup-container {
-    text-align: left; /* Centers the button horizontally */
-    margin-top: 25px; /* Adds spacing above and below the button */
+    margin-top: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button-login {
+    font-family: 'Eightgon', sans-serif;
+    display: inline-block;
+    background-color: #CECECE;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
 }
 
 .submit-button-sign-up {
-    font-family: 'Eightgon', sans-serif; /* Uses the custom font */
-    display: inline-block; /* Makes the button behave like an inline block */
-    background-color: #CECECE; /* Button background color */
-    color: #333; /* Button text color */
-    text-decoration: none; /* Removes underline from the text */
-    padding: 10px 20px; /* Adds padding inside the button */
-    font-size: 16px; /* Adjusts the font size */
-    font-weight: bold; /* Makes the text bold */
-    border-radius: 5px; /* Rounds the corners of the button */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Adds smooth hover and click effects */
-    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    font-family: 'Eightgon', sans-serif;
+    display: inline-block;
+    background-color: #CECECE;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
 }
 
 .submit-button-sign-up:hover {
     background-color: #C39131; /* Changes the background color on hover */
     color: white; /* Changes the text color on hover */
 }
-
 
 /* Group Photo Styles */
 figure {
@@ -550,5 +586,9 @@ figure {
     }
     aside.job-tips {
         display: none; /* Hides the application tips on small screens */
+    }
+    .login-signup-wrapper {
+        flex-direction: column;
+        align-items: center;
     }
 }

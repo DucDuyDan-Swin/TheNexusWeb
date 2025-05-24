@@ -25,7 +25,7 @@
                 unset($_SESSION['form_errors']);
             }
             ?>
-            <form action="process_eoi.php" method="post" novalidate="novalidate" enctype="multipart/form-data">
+            <form action="process_eoi.php" method="post" novalidate="novalidate" enctype="multipart/form-data" class="job-application-form">
                 <h2>Job Application Form</h2>
                 <!-- Job Reference Number -->
                 <label for="job-ref">Job Reference Number:</label>

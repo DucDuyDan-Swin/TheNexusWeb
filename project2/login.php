@@ -100,22 +100,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h1>Login</h1>
         <?php if (!empty($login_error)) echo "<p style='color:red;'>$login_error</p>"; ?>
         <form method="POST" action="">
-            <div class="form-group">
+            <div class="form-login-signup">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
             </div>
-            <div class="form-group">
+            <div class="form-login-signup">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
             <br>
-            <input type="submit" value="Login" class="submit-button-login">
+            <div class="signup-container">
+                <input type="submit" value="Login" class="submit-button-login">
+                <a href="signup.php" class="submit-button-sign-up">Sign Up</a>
+            </div>
         </form>
-        <div class="signup-container">
-            <a href="signup.php" class="submit-button-sign-up"><strong>Sign Up</strong></a>
-        </div>
     </section>
 </main>
-<?php include 'footer.inc'; ?>
 </body>
 </html>

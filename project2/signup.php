@@ -60,13 +60,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="form-group">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Enter Password" required>
-                <small>Password must be at least 8 characters, include an uppercase letter, a lowercase letter, and a number.</small>
+                <p><code>Password must be at least 8 characters, include an uppercase letter, a lowercase letter, and a number.</code></p>
             </div>
             <br>
-            <input type="submit" value="Sign-Up" class="submit-button-sign-up">
+            <div class="signup-container">
+                <input type="submit" value="Sign-Up" class="submit-button-sign-up">
+            </div>
         </form>
     </section>
 </main>
-<?php include 'footer.inc'; ?>
 </body>
 </html>
