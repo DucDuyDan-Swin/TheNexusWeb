@@ -10,7 +10,7 @@
     <main>
         <section>
             <h2>Group Information</h2>
-            <p>Welcome to our group page! Here’s everything you need to know about us.</p>
+            <p>Welcome to our group page! Here's everything you need to know about us.</p>
 
             <!-- Group Name and Class Time -->
             <h3>Group Name and Class Time</h3>
@@ -39,26 +39,26 @@
             <ol>
                 <li>Duc Duy Dan (Team Leader)
                     <ul>
-                        <li>Shared Responsibility: index.php, login.php, signup.php, process_eoi.php, setting.php, styles.css, header.inc, nav.inc, footer.inc, recheck the program, update database, Project Group Presentation</li>
-                        <li>Individual Responsibility: jobs.php, manage.php, images, upload and show user's CV, group agreement form, responsible for product submission</li>
+                        <li>Shared Responsibility: index.php, login.php, signup.php, process_eoi.php, setting.php styles.css, header.inc, nav.inc, footer.inc, recheck the program, update database</li>
+                        <li>Individual Responsibility: jobs.php, manage.php, group agreement form, responsible for product submission</li>
                     </ul>
                 </li>   
                 <li>Sebastian Wang
                     <ul>
-                        <li>Shared Responsibility: index.php, styles.css (for apply.php), confirmation.php, Project Group Presentation</li>
+                        <li>Shared Responsibility: index.html, styles.css (for apply.html), confirmation.php,</li>
                         <li>Individual Responsibility: process_eoi.php, added an error message when uploading a form on apply.php and create a eoi table</li>
                     </ul>
                 </li>
                 <li>Ethan Putra
                     <ul>
-                        <li>Shared Responsibility: jobs.php (job name and job description), Project Group Presentation</li>
-                        <li>Individual Responsibility: about.php, test the program as a user</li>
+                        <li>Shared Responsibility: jobs.html (job name and job description)</li>
+                        <li>Individual Responsibility: about.html, test the program as a user</li>
                     </ul>
                 </li>    
                 <li>Tessy Kurian
                     <ul>
-                        <li>Shared Responsibility: index.php, about.php, job.php</li>
-                        <li>Individual Responsibility: index.php, jobs.php, Project Group Presentation</li>
+                        <li>Shared Responsibility: index.html, about.php, job.php</li>
+                        <li>Individual Responsibility: index.html, jobs.php</li>
                     </ul>
                 </li>
             </ol>
@@ -85,7 +85,7 @@
                         <td>Gaming, eating, cycling and sleep</td>
                     </tr>
                     <tr id="Sebastian">
-                        <td><a href="enhancements.php" style="text-decoration:none; color:inherit;">Sebastian Wang</a></td>
+                        <td>Sebastian Wang</td>
                         <td>Gaming, cooking, singing, sleep, eating, and swimming</td>
                     </tr>
                     <tr id="Ethan">
