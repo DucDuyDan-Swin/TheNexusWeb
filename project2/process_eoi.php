@@ -56,9 +56,6 @@ $other_skills = clean($_POST['other_skills'] ?? '');
 $errors = [];
 
 // Check if "Other" is checked but "Other Skills" is empty
-if (in_array('OtherS', $skills) && $other_skills === '') {
-    $errors[] = "If you select 'Other' as a skill, you must fill out the Other Skills box.";
-}
 
 // Basic validation
 if (!$job_ref) $errors[] = "Job reference is required.";
@@ -73,19 +70,16 @@ if (!preg_match("/^\d{4}$/", $postcode)) $errors[] = "Postcode must be 4 digits.
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Invalid email.";
 if (!preg_match("/^\d{8,12}$/", $phone)) $errors[] = "Phone must be 8-12 digits.";
 if (empty($skills)) $errors[] = "Select at least one skill.";
-if (in_array("Other", $skills) && empty($other_skills)) {
+if (in_array("OtherS", $skills) && empty($other_skills)) {
     $errors[] = "Please describe your other skills.";
 }
 
 // If errors, redirect back with errors
-if (!empty($errors)) {
-    echo "<h2>There were errors in your submission:</h2><ul>";
-    foreach ($errors as $error) {
-        echo "<li>" . htmlspecialchars($error) . "</li>";
-    }
-    echo "</ul><a href='javascript:history.back()'>Go Back</a>";
-    exit();
-}
+if ($errors) {
+    $_SESSION['form_errors'] = $errors;
+    $_SESSION['form_data'] = $_POST;
+    header("Location: apply.php");
+    exit (); }
 
 // Create table if not exists
 $create = "CREATE TABLE IF NOT EXISTS eoi (
