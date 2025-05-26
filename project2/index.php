@@ -23,12 +23,12 @@
                 <h2>Contact Us</h2>
                 <p>If you have any questions or would like to learn more about Nexus, please feel free to reach out to us. We are here to help!</p>
                 <address>
-                <p><strong>Email:</strong> <a href="mailto:info@nexus.example">info@nexus.example</a></p>
-                <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                <p><strong>Address:</strong> 123 Tech Street, Innovation City</p>
+                <p><strong>Email:</strong> <a href="mailto:nexusweb4321@gmail.com">nexusweb4321@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+61392143333">+61 3 9214 3333</a></p>
+                <p><strong>Address:</strong> Swinburne University of Technology, John St, Hawthorn VIC 3122</p>
                 </address>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.158215399012!2d-122.08390972426697!3d37.42199997982545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080c2c5ff49%3A0xf0a80ae7a6c5f2e5!2sGoogleplex!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5433.277486275969!2d145.03637967738405!3d-37.8221503719734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642326bae5aaf%3A0x75e96bbd4988f769!2zxJDhuqFpIGjhu41jIEvhu7kgdGh14bqtdCBTd2luYnVybmU!5e1!3m2!1svi!2sau!4v1748227343127!5m2!1svi!2sau" class="google-map">
         </iframe>
     </div>
         </section>
